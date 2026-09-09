@@ -1,0 +1,37 @@
+# Secrets
+.env
+*.pem
+*.key
+credentials.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.pyright_cache/
+
+# Node (demo/ build, from M2 onward)
+node_modules/
+dist/
+
+# Generated data and model artifacts (regenerate with make targets)
+data/generated/
+*.onnx
+*.safetensors
+*.bin
+*.pt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Internal planning docs (see internal/README.md)
+internal/

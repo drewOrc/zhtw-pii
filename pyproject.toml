@@ -1,0 +1,42 @@
+[project]
+name = "zhtw-pii"
+version = "0.1.0"
+description = "Traditional Chinese PII and sensitive-entity detector, benchmarked and runnable in-browser."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Bo-Yu Chen" }]
+requires-python = "==3.11.*"
+dependencies = [
+    "pydantic-settings==2.15.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["zhtw_pii"]
+
+[dependency-groups]
+dev = [
+    "pyright==1.1.411",
+    "pytest==9.1.1",
+    "ruff==0.16.6",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pyright]
+typeCheckingMode = "basic"
+
+[tool.pytest.ini_options]
+markers = [
+    "unit: fast, no network, no filesystem outside tmp_path",
+    "integration: needs a real model or external process",
+    "slow: takes more than a few seconds",
+]
+addopts = "-m unit"
