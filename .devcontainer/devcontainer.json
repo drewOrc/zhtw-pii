@@ -1,0 +1,16 @@
+{
+  "name": "zhtw-pii",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/va-h/devcontainers-features/uv:1": {
+      "version": "latest",
+      "shellautocompletion": true
+    }
+  },
+  "postCreateCommand": "make setup",
+  "customizations": {
+    "vscode": {
+      "extensions": ["charliermarsh.ruff", "ms-python.python"]
+    }
+  }
+}

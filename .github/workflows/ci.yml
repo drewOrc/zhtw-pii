@@ -1,0 +1,78 @@
+name: CI
+
+# Runs on every PR and every push to main. Three independent jobs so the
+# fastest checks report red first; none of them touch the network or need
+# secrets, so a fork's PR can run this without any repo configuration.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install uv (reads .python-version for the Python toolchain)
+        uses: astral-sh/setup-uv@v10
+        with:
+          enable-cache: true
+
+      - name: Install dependencies (locked)
+        run: uv sync --frozen
+
+      - name: ruff check
+        run: uv run ruff check .
+
+      - name: ruff format --check
+        run: uv run ruff format --check .
+
+      - name: pyright
+        run: uv run pyright
+
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install uv (reads .python-version for the Python toolchain)
+        uses: astral-sh/setup-uv@v10
+        with:
+          enable-cache: true
+
+      - name: Install dependencies (locked)
+        run: uv sync --frozen
+
+      - name: pytest (unit only; integration/slow need a real model, out of Day 0 scope)
+        run: make test
+
+  secrets-guard:
+    name: secrets-guard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: No secrets, model weights, or internal planning docs tracked
+        # This repo is public. Catches an accidentally committed .env, a
+        # model weight file (kept on HF Hub / Releases per ADR-0005, never
+        # in git), or the internal/ planning directory (gitignored, see
+        # internal/README.md) before it reaches a PR diff a stranger reads.
+        run: |
+          if git ls-files | grep -E '(^|/)\.env$|\.onnx$|\.safetensors$|\.bin$|\.pt$|^internal/|__pycache__|\.venv/'; then
+            echo "::error::tracked files match the secrets/artifact guard pattern above"
+            exit 1
+          fi
+          echo "clean: no .env, no model weights, no internal/, no __pycache__ or .venv tracked"

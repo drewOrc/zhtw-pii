@@ -1,0 +1,18 @@
+version: 2
+updates:
+  # uv.lock is the single dependency lockfile for the project.
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+
+  # Keep pinned Actions versions (actions/checkout, astral-sh/setup-uv, etc.)
+  # current; ci.yml and reproduce.yml pin to major versions on purpose.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
