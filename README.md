@@ -1,5 +1,7 @@
 # zhtw-pii
 
+[![CI](https://github.com/drewOrc/zhtw-pii/actions/workflows/ci.yml/badge.svg)](https://github.com/drewOrc/zhtw-pii/actions/workflows/ci.yml)
+
 Traditional Chinese PII and sensitive-entity detection, benchmarked against
 existing tools and runnable fully in the browser.
 

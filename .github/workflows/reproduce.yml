@@ -1,0 +1,80 @@
+name: Reproduce
+
+# Reproducibility is a claim in the README ("make testset run twice with
+# the same seed produces byte-identical output"). This workflow verifies
+# that claim on a clean checkout every week instead of trusting it forever,
+# and checks the generator has not silently drifted from the frozen v0 test
+# set that the benchmark and any trained model are evaluated against.
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 3 * * 0" # every Sunday, 03:00 UTC
+
+concurrency:
+  group: reproduce-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  reproduce:
+    name: reproduce
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install uv (reads .python-version for the Python toolchain)
+        uses: astral-sh/setup-uv@v10.0.1
+        with:
+          enable-cache: true
+
+      - name: Install dependencies (locked)
+        run: uv sync --frozen
+
+      - name: Preserve the committed frozen v0 test set for later comparison
+        run: cp data/testset/v0/test.jsonl /tmp/frozen-v0.jsonl
+
+      - name: Run 1 of make testset (default seed 42)
+        run: make testset
+
+      - name: Hash run 1
+        id: run1
+        run: echo "sha=$(shasum -a 256 data/testset/v0/test.jsonl | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+
+      - name: Run 2 of make testset (default seed 42)
+        run: make testset
+
+      - name: Compare run 1 and run 2 (determinism)
+        run: |
+          run2_sha=$(shasum -a 256 data/testset/v0/test.jsonl | cut -d' ' -f1)
+          if [ "$run2_sha" != "${{ steps.run1.outputs.sha }}" ]; then
+            echo "::error::make testset is not deterministic: run1=${{ steps.run1.outputs.sha }} run2=$run2_sha"
+            exit 1
+          fi
+          echo "deterministic: both runs produced $run2_sha"
+
+      - name: Compare regenerated output against the frozen committed test set
+        run: |
+          frozen_sha=$(shasum -a 256 /tmp/frozen-v0.jsonl | cut -d' ' -f1)
+          regenerated_sha=$(shasum -a 256 data/testset/v0/test.jsonl | cut -d' ' -f1)
+          if [ "$frozen_sha" != "$regenerated_sha" ]; then
+            echo "::error::regenerated seed=42 output ($regenerated_sha) no longer matches the committed data/testset/v0/test.jsonl ($frozen_sha)"
+            exit 1
+          fi
+          echo "matches frozen v0 test set: $regenerated_sha"
+
+      - name: File an issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          BODY="The weekly reproducibility check failed. Run: $RUN_URL. Either 'make testset' is no longer deterministic (two same-seed runs disagreed), or the generator's output has drifted from the frozen data/testset/v0/test.jsonl without a version bump. If the drift is intentional, follow the versioning procedure in docs/OPERATIONS.md (freeze a new data/testset/v1/, update data/CHANGELOG.md) rather than overwriting v0 in place."
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "reproduce.yml failed on $(date -u +%Y-%m-%d)" \
+            --label "type:bug,area:data,prio:p0" \
+            --body "$BODY"
