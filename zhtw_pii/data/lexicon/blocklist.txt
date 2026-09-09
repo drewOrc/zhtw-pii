@@ -1,0 +1,4 @@
+# Names to exclude from PERSON generation (e.g. real public figures the
+# combinatorial generator could coincidentally reproduce). One full name per
+# line. Lines starting with # and blank lines are ignored. Empty by default
+# for Day 0; populate as collisions are found (see PLAN risk R9).

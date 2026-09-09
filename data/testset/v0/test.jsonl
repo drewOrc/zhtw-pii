@@ -1,0 +1,300 @@
+{"id": "easy_001", "text": "姓名：吳詠。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_002", "text": "本月請款單位：集賢有限公司。", "entities": [{"start": 7, "end": 13, "label": "ORG"}], "tier": "easy", "seed": 42, "template_id": "fi_03"}
+{"id": "easy_003", "text": "姓名：陳彥。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_004", "text": "匯款人江柔，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_005", "text": "匯款人江語，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_006", "text": "匯款人李怡，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_007", "text": "匯款人高浩涵，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_008", "text": "匯款人歐瑄，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_009", "text": "姓名：彭靜。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_010", "text": "您好，我是洪佳宸，想詢問訂單狀態。", "entities": [{"start": 5, "end": 8, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_011", "text": "本月請款單位：集賢工作室。", "entities": [{"start": 7, "end": 12, "label": "ORG"}], "tier": "easy", "seed": 42, "template_id": "fi_03"}
+{"id": "easy_012", "text": "匯款人蔡豪翔，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_013", "text": "您好，我是江采品，想詢問訂單狀態。", "entities": [{"start": 5, "end": 8, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_014", "text": "病患劉筠明預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_015", "text": "匯款人曾睿，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_016", "text": "您好，我是楊浩瑄，想詢問訂單狀態。", "entities": [{"start": 5, "end": 8, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_017", "text": "病患莊雅翔預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_018", "text": "申請人：李智。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_019", "text": "姓名：蕭瑄。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_020", "text": "姓名：莊芸承。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_021", "text": "您好，我是宋家，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_022", "text": "您好，我是葉睿，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_023", "text": "申請人：曹雅恩。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_024", "text": "本月請款單位：廣益協會。", "entities": [{"start": 7, "end": 11, "label": "ORG"}], "tier": "easy", "seed": 42, "template_id": "fi_03"}
+{"id": "easy_025", "text": "姓名：葉雅。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_026", "text": "申請人：邱承。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_027", "text": "病患王浩預約於明日回診。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_028", "text": "本月請款單位：協和股份有限公司。", "entities": [{"start": 7, "end": 15, "label": "ORG"}], "tier": "easy", "seed": 42, "template_id": "fi_03"}
+{"id": "easy_029", "text": "本月請款單位：集賢基金會。", "entities": [{"start": 7, "end": 12, "label": "ORG"}], "tier": "easy", "seed": 42, "template_id": "fi_03"}
+{"id": "easy_030", "text": "姓名：沈靜。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_031", "text": "您好，我是張軒，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_032", "text": "您好，我是曹詠，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_033", "text": "病患周佳靜預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_034", "text": "申請人：李品。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_035", "text": "病患曾柔預約於明日回診。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_036", "text": "您好，我是徐語，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_037", "text": "匯款人吳淑，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_038", "text": "匯款人曾婷翔，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_039", "text": "您好，我是蔡浩承，想詢問訂單狀態。", "entities": [{"start": 5, "end": 8, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_040", "text": "病患楊涵預約於明日回診。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_041", "text": "病患黃佳雅預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_042", "text": "姓名：楊浩。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_043", "text": "申請人：何淑。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_044", "text": "申請人：郭品。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_045", "text": "匯款人謝筠淑，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_046", "text": "您好，我是沈文明，想詢問訂單狀態。", "entities": [{"start": 5, "end": 8, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_047", "text": "匯款人蕭靜彥，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_048", "text": "病患黃家芸預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_049", "text": "病患蕭筠預約於明日回診。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_050", "text": "病患徐靜詩預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_051", "text": "姓名：鄭詩語。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_052", "text": "您好，我是周承承，想詢問訂單狀態。", "entities": [{"start": 5, "end": 8, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_053", "text": "姓名：許惠。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_054", "text": "病患邱怡翊預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_055", "text": "申請人：李嘉小。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_056", "text": "病患陳彥預約於明日回診。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_057", "text": "申請人：邱品。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_058", "text": "申請人：羅語承。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_059", "text": "申請人：廖小雅。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_060", "text": "匯款人沈智，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_061", "text": "申請人：何瑄品。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_062", "text": "本月請款單位：誠信協會。", "entities": [{"start": 7, "end": 11, "label": "ORG"}], "tier": "easy", "seed": 42, "template_id": "fi_03"}
+{"id": "easy_063", "text": "病患何宸預約於明日回診。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_064", "text": "申請人：呂品。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_065", "text": "申請人：林彥。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_066", "text": "申請人：高筠昀。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_067", "text": "匯款人林柔，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_068", "text": "申請人：邱文。", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_069", "text": "病患洪婷涵預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_070", "text": "申請人：許偉詠。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_071", "text": "您好，我是謝詠，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_072", "text": "姓名：歐心。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_073", "text": "您好，我是葉嘉，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "cs_01"}
+{"id": "easy_074", "text": "本月請款單位：啟明事務所。", "entities": [{"start": 7, "end": 12, "label": "ORG"}], "tier": "easy", "seed": 42, "template_id": "fi_03"}
+{"id": "easy_075", "text": "申請人：沈品彥。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_076", "text": "姓名：廖雅品。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "rc_02"}
+{"id": "easy_077", "text": "病患鄭佳柔預約於明日回診。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "md_01"}
+{"id": "easy_078", "text": "匯款人陳豪，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "easy_079", "text": "申請人：朱文豪。", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "ad_01"}
+{"id": "easy_080", "text": "匯款人簡彥語，請確認收款帳戶無誤。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "easy", "seed": 42, "template_id": "fi_01"}
+{"id": "medium_001", "text": "謝明瑄的聯絡地址為桃園市桃園區仁愛街２段２６９號看診科別為家醫科", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 24, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_002", "text": "匯通股份有限公司已將款項匯至沈淑的帳戶，地址核對為台北市中正區復興街３段６５號。", "entities": [{"start": 0, "end": 8, "label": "ORG"}, {"start": 14, "end": 16, "label": "PERSON"}, {"start": 25, "end": 39, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_003", "text": "立信有限公司人資部門將聯繫張先生安排面試地點新北市板橋區忠孝路３段１５６號", "entities": [{"start": 0, "end": 6, "label": "ORG"}, {"start": 13, "end": 16, "label": "PERSON"}, {"start": 22, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_004", "text": "郭承承小姐的包裹已送達新竹市北區羅斯福路3段51號，如有疑問請聯繫華夏基金會客服。", "entities": [{"start": 0, "end": 5, "label": "PERSON"}, {"start": 11, "end": 25, "label": "ADDRESS"}, {"start": 33, "end": 38, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_005", "text": "許小姐的戶籍地址登記為基隆市信義區中山路２段１４５號特此公告", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 26, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_006", "text": "泰安基金會人資部門將聯繫謝先生安排面試地點台南市東區中正路１段１５８號", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 21, "end": 35, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_007", "text": "匯通工作室已將款項匯至沈承豪的帳戶，地址核對為台北市士林區和平街１段４７號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 23, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_008", "text": "廖軒的戶籍地址登記為基隆市信義區信義路3段224號，特此公告。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 10, "end": 25, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_009", "text": "昇陽協會人資部門將聯繫許嘉宸安排面試，地點：台南市安平區民生路2段46號。", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 22, "end": 36, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_010", "text": "陳先生的聯絡地址為基隆市信義區中山路2段282號看診科別為家醫科", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 24, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_011", "text": "本案由泰安協會承辦，聯絡人為邱玲。", "entities": [{"start": 3, "end": 7, "label": "ORG"}, {"start": 14, "end": 16, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_012", "text": "客戶高勇小姐來電反映，居住地址為台南市安平區信義街2段242號，請盡快處理。", "entities": [{"start": 2, "end": 6, "label": "PERSON"}, {"start": 16, "end": 31, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_013", "text": "蔡小姐的戶籍地址登記為台南市東區信義街３段２９７號，特此公告。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 25, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_014", "text": "集賢事務所人資部門將聯繫高翊雅安排面試，地點：新竹市東區民生路2段243號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 23, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_015", "text": "應徵者朱智投遞了集賢工作室的職缺", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 13, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_016", "text": "高勇的聯絡地址為新竹市東區中正街2段174號，看診科別為家醫科。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 22, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_017", "text": "應徵者江小宸投遞了集賢股份有限公司的職缺。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}, {"start": 9, "end": 17, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_018", "text": "王偉小的包裹已送達新北市新莊區忠孝街１段２４號如有疑問請聯繫立信協會客服", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 23, "label": "ADDRESS"}, {"start": 30, "end": 34, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_019", "text": "客戶曹先生來電反映居住地址為新竹市東區建國路１段２３７號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 28, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_020", "text": "匯通基金會已將款項匯至沈傑的帳戶，地址核對為基隆市信義區羅斯福街3段218號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 13, "label": "PERSON"}, {"start": 22, "end": 38, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_021", "text": "昇陽有限公司已將款項匯至江女士的帳戶，地址核對為新竹市北區中山路3段255號。", "entities": [{"start": 0, "end": 6, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 24, "end": 38, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_022", "text": "華夏工作室已將款項匯至曾小先生的帳戶，地址核對為台北市信義區建國路3段187號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 15, "label": "PERSON"}, {"start": 24, "end": 39, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_023", "text": "本案由啟明協會承辦聯絡人為沈芸睿小姐", "entities": [{"start": 3, "end": 7, "label": "ORG"}, {"start": 13, "end": 18, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_024", "text": "立信協會已將款項匯至劉傑勇的帳戶，地址核對為台中市南屯區民生街1段203號。", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 10, "end": 13, "label": "PERSON"}, {"start": 22, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_025", "text": "客戶曾先生來電反映居住地址為基隆市仁愛區羅斯福街３段１１４號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 30, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_026", "text": "劉宇的包裹已送達台北市信義區建國路1段121號，如有疑問請聯繫集賢有限公司客服。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 23, "label": "ADDRESS"}, {"start": 31, "end": 37, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_027", "text": "應徵者何嘉投遞了昇陽協會的職缺。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 12, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_028", "text": "華夏事務所人資部門將聯繫羅涵安排面試，地點：新北市中和區復興街１段２０４號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 14, "label": "PERSON"}, {"start": 22, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_029", "text": "華夏基金會已將款項匯至歐小姐的帳戶地址核對為桃園市八德區仁愛路3段107號", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 22, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_030", "text": "歐淑先生的戶籍地址登記為台南市東區中正路1段8號，特此公告。", "entities": [{"start": 0, "end": 4, "label": "PERSON"}, {"start": 12, "end": 24, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_031", "text": "張女士的聯絡地址為新北市新莊區建國街３段５６號，看診科別為家醫科。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 23, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_032", "text": "集賢診所人資部門將聯繫高翔安排面試，地點：基隆市信義區民生路２段２２８號。", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 11, "end": 13, "label": "PERSON"}, {"start": 21, "end": 36, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_033", "text": "宋女士的包裹已送達新竹市東區中正路２段２３２號，如有疑問請聯繫華夏事務所客服。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 23, "label": "ADDRESS"}, {"start": 31, "end": 36, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_034", "text": "周涵勇女士的聯絡地址為新北市板橋區中正路2段50號，看診科別為家醫科。", "entities": [{"start": 0, "end": 5, "label": "PERSON"}, {"start": 11, "end": 25, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_035", "text": "葉嘉的聯絡地址為高雄市鳳山區民生路2段160號，看診科別為家醫科。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 23, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_036", "text": "吳語涵的聯絡地址為新北市中和區羅斯福路２段２８８號看診科別為家醫科", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 25, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_037", "text": "客戶廖筠柔來電反映，居住地址為台北市大安區忠孝街1段73號，請盡快處理。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 15, "end": 29, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_038", "text": "客戶許玲靜來電反映居住地址為新北市板橋區忠孝路３段２６號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 28, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_039", "text": "廖睿的包裹已送達新北市中和區民生路2段250號如有疑問請聯繫集賢基金會客服", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 23, "label": "ADDRESS"}, {"start": 30, "end": 35, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_040", "text": "匯通有限公司已將款項匯至蔡先生的帳戶地址核對為新竹市東區忠孝街3段118號", "entities": [{"start": 0, "end": 6, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 23, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_041", "text": "李心彥的聯絡地址為新竹市北區信義路２段１１號看診科別為家醫科", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 22, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_042", "text": "莊彥的聯絡地址為新北市三重區民生街3段41號看診科別為家醫科", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 22, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_043", "text": "應徵者李芸投遞了集賢有限公司的職缺。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 14, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_044", "text": "吳婷的聯絡地址為台中市西屯區羅斯福路3段39號看診科別為家醫科", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 23, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_045", "text": "本案由泰安事務所承辦，聯絡人為曹小靜。", "entities": [{"start": 3, "end": 8, "label": "ORG"}, {"start": 15, "end": 18, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_046", "text": "本案由泰安股份有限公司承辦，聯絡人為蘇玲。", "entities": [{"start": 3, "end": 11, "label": "ORG"}, {"start": 18, "end": 20, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_047", "text": "昇陽工作室人資部門將聯繫歐品詠女士安排面試，地點：台北市士林區羅斯福路2段244號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 17, "label": "PERSON"}, {"start": 25, "end": 41, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_048", "text": "本案由昇陽工作室承辦，聯絡人為鄭雅。", "entities": [{"start": 3, "end": 8, "label": "ORG"}, {"start": 15, "end": 17, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_049", "text": "匯通事務所人資部門將聯繫何采翔安排面試，地點：高雄市三民區和平路3段198號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 23, "end": 38, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_050", "text": "啟明診所已將款項匯至王柔的帳戶地址核對為台南市安平區民生路3段44號", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 10, "end": 12, "label": "PERSON"}, {"start": 20, "end": 34, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_051", "text": "集賢股份有限公司已將款項匯至蕭文涵的帳戶，地址核對為台南市東區仁愛街２段９９號。", "entities": [{"start": 0, "end": 8, "label": "ORG"}, {"start": 14, "end": 17, "label": "PERSON"}, {"start": 26, "end": 39, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_052", "text": "鍾女士的戶籍地址登記為新竹市東區忠孝路３段８５號，特此公告。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 24, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_053", "text": "泰安診所人資部門將聯繫羅先生安排面試地點基隆市仁愛區和平街2段145號", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 20, "end": 35, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_054", "text": "應徵者歐婷投遞了誠信基金會的職缺。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 13, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_055", "text": "昇陽診所人資部門將聯繫王淑安排面試，地點：基隆市仁愛區民生路１段２３１號。", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 11, "end": 13, "label": "PERSON"}, {"start": 21, "end": 36, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_056", "text": "江涵的聯絡地址為台中市西屯區和平路３段１７２號，看診科別為家醫科。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 23, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_057", "text": "本案由啟明協會承辦聯絡人為簡先生", "entities": [{"start": 3, "end": 7, "label": "ORG"}, {"start": 13, "end": 16, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_058", "text": "劉雅玲的戶籍地址登記為新北市板橋區仁愛街3段235號，特此公告。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 26, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_059", "text": "鍾勇的包裹已送達台南市北區中山街1段293號如有疑問請聯繫協和有限公司客服", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 22, "label": "ADDRESS"}, {"start": 29, "end": 35, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_060", "text": "鍾小姐的包裹已送達新竹市北區信義路2段35號，如有疑問請聯繫立信有限公司客服。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 22, "label": "ADDRESS"}, {"start": 30, "end": 36, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_061", "text": "沈軒品的包裹已送達基隆市仁愛區忠孝路３段２３５號，如有疑問請聯繫誠信診所客服。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 24, "label": "ADDRESS"}, {"start": 32, "end": 36, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_062", "text": "鍾小姐的戶籍地址登記為台中市北屯區和平路３段１７０號特此公告", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 26, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_063", "text": "協和診所已將款項匯至鄭女士的帳戶地址核對為新北市新莊區中正街3段93號", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 10, "end": 13, "label": "PERSON"}, {"start": 21, "end": 35, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_064", "text": "泰安基金會已將款項匯至蕭小姐的帳戶地址核對為高雄市鳳山區民生街3段30號", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 22, "end": 36, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_065", "text": "許勇的包裹已送達基隆市仁愛區忠孝路1段188號，如有疑問請聯繫立信事務所客服。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 23, "label": "ADDRESS"}, {"start": 31, "end": 36, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_066", "text": "客戶李芸來電反映，居住地址為高雄市苓雅區和平街1段59號，請盡快處理。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}, {"start": 14, "end": 28, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_067", "text": "客戶曾承佳來電反映，居住地址為台南市安平區建國路１段７０號，請盡快處理。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 15, "end": 29, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_068", "text": "周傑語的包裹已送達台南市北區忠孝路2段261號，如有疑問請聯繫華夏股份有限公司客服。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 23, "label": "ADDRESS"}, {"start": 31, "end": 39, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_069", "text": "曹先生的戶籍地址登記為新北市板橋區信義街3段246號，特此公告。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 26, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_070", "text": "應徵者李品芸投遞了立信有限公司的職缺。", "entities": [{"start": 3, "end": 6, "label": "PERSON"}, {"start": 9, "end": 15, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_071", "text": "本案由昇陽工作室承辦，聯絡人為楊浩浩小姐。", "entities": [{"start": 3, "end": 8, "label": "ORG"}, {"start": 15, "end": 20, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_072", "text": "曾小的戶籍地址登記為台南市東區信義路3段87號特此公告", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 10, "end": 23, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_073", "text": "本案由泰安股份有限公司承辦聯絡人為林宇", "entities": [{"start": 3, "end": 11, "label": "ORG"}, {"start": 17, "end": 19, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_074", "text": "廣益基金會已將款項匯至沈玲恩的帳戶，地址核對為台中市南屯區民生街2段38號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 23, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_075", "text": "客戶楊靜柔來電反映居住地址為新竹市東區和平路2段124號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 28, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_076", "text": "協和協會人資部門將聯繫何浩安排面試地點高雄市鳳山區和平路１段２５６號", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 11, "end": 13, "label": "PERSON"}, {"start": 19, "end": 34, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_077", "text": "集賢事務所人資部門將聯繫邱小姐安排面試，地點：台南市北區羅斯福街２段２７５號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 23, "end": 38, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_078", "text": "客戶呂宇詩來電反映，居住地址為台北市大安區和平街1段198號，請盡快處理。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 15, "end": 30, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_079", "text": "昇陽有限公司人資部門將聯繫吳涵筠女士安排面試，地點：桃園市桃園區羅斯福街3段21號。", "entities": [{"start": 0, "end": 6, "label": "ORG"}, {"start": 13, "end": 18, "label": "PERSON"}, {"start": 26, "end": 41, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_080", "text": "客戶楊靜來電反映居住地址為高雄市三民區民生街3段173號請盡快處理", "entities": [{"start": 2, "end": 4, "label": "PERSON"}, {"start": 13, "end": 28, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_081", "text": "昇陽事務所人資部門將聯繫宋女士安排面試，地點：台中市南屯區中山街1段269號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 23, "end": 38, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_082", "text": "應徵者劉文投遞了廣益診所的職缺", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 12, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_083", "text": "應徵者簡智投遞了集賢有限公司的職缺", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 14, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_084", "text": "高瑄柔的聯絡地址為台南市安平區建國路１段１４３號，看診科別為家醫科。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 24, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_085", "text": "華夏基金會已將款項匯至朱恩柔的帳戶地址核對為台南市北區中正街２段１７７號", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 22, "end": 36, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_086", "text": "本案由廣益基金會承辦聯絡人為曾女士", "entities": [{"start": 3, "end": 8, "label": "ORG"}, {"start": 14, "end": 17, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_087", "text": "集賢有限公司已將款項匯至郭偉的帳戶地址核對為新竹市北區建國路3段71號", "entities": [{"start": 0, "end": 6, "label": "ORG"}, {"start": 12, "end": 14, "label": "PERSON"}, {"start": 22, "end": 35, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_088", "text": "客戶簡翊惠來電反映，居住地址為高雄市苓雅區中山路３段２９４號，請盡快處理。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 15, "end": 30, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "medium_089", "text": "鄭軒宇的戶籍地址登記為新竹市北區忠孝街1段5號，特此公告。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 23, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "ad_03"}
+{"id": "medium_090", "text": "集賢工作室已將款項匯至朱小姐的帳戶，地址核對為新北市中和區忠孝街3段132號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 23, "end": 38, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "fi_02"}
+{"id": "medium_091", "text": "本案由華夏有限公司承辦聯絡人為呂先生", "entities": [{"start": 3, "end": 9, "label": "ORG"}, {"start": 15, "end": 18, "label": "PERSON"}], "tier": "medium", "seed": 42, "template_id": "ad_02"}
+{"id": "medium_092", "text": "曾雅承小姐的包裹已送達台南市安平區羅斯福路２段１８５號如有疑問請聯繫華夏股份有限公司客服", "entities": [{"start": 0, "end": 5, "label": "PERSON"}, {"start": 11, "end": 27, "label": "ADDRESS"}, {"start": 34, "end": 42, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_093", "text": "徐小姐的包裹已送達台中市西屯區忠孝街1段233號，如有疑問請聯繫泰安診所客服。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 24, "label": "ADDRESS"}, {"start": 32, "end": 36, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "cs_03"}
+{"id": "medium_094", "text": "應徵者洪采投遞了昇陽工作室的職缺。", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 13, "label": "ORG"}], "tier": "medium", "seed": 42, "template_id": "rc_01"}
+{"id": "medium_095", "text": "集賢工作室人資部門將聯繫謝浩小姐安排面試，地點：基隆市仁愛區仁愛街1段262號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 16, "label": "PERSON"}, {"start": 24, "end": 39, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_096", "text": "誠信工作室人資部門將聯繫高文詩安排面試，地點：台南市東區仁愛路1段217號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 23, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_097", "text": "簡惠的聯絡地址為新竹市東區忠孝街２段１９６號，看診科別為家醫科。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 22, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "md_02"}
+{"id": "medium_098", "text": "集賢有限公司人資部門將聯繫蘇軒安排面試，地點：新竹市東區仁愛路１段１５３號。", "entities": [{"start": 0, "end": 6, "label": "ORG"}, {"start": 13, "end": 15, "label": "PERSON"}, {"start": 23, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_099", "text": "華夏事務所人資部門將聯繫蘇淑安排面試，地點：台中市南屯區中正路3段215號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 14, "label": "PERSON"}, {"start": 22, "end": 37, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "rc_03"}
+{"id": "medium_100", "text": "客戶張小姐來電反映居住地址為台中市西屯區忠孝街1段295號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 29, "label": "ADDRESS"}], "tier": "medium", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_001", "text": "楊嘉的戶籍地址登記為台南市北區特此公告", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 10, "end": 15, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "ad_03"}
+{"id": "hard_002", "text": "您好我是蕭女士想詢問訂單狀態", "entities": [{"start": 4, "end": 7, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "cs_01"}
+{"id": "hard_003", "text": "姓名鄭雅怡小姐", "entities": [{"start": 2, "end": 7, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "rc_02"}
+{"id": "hard_004", "text": "彭昀的包裹已送達台中市北屯區仁愛街３段４１號，如有疑問請聯繫廣益協會客服。", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 22, "label": "ADDRESS"}, {"start": 30, "end": 34, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "hard_005", "text": "歐傑的戶籍地址登記為台中市南屯區特此公告", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 10, "end": 16, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "ad_03"}
+{"id": "hard_006", "text": "應徵者徐佳先生投遞了昇陽基金會的職缺", "entities": [{"start": 3, "end": 7, "label": "PERSON"}, {"start": 10, "end": 15, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "rc_01"}
+{"id": "hard_007", "text": "姓名邱小姐", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "rc_02"}
+{"id": "hard_008", "text": "簡小姐的戶籍地址登記為台中市南屯區特此公告", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 17, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "ad_03"}
+{"id": "hard_009", "text": "賴小姐的包裹已送達台中市北屯區復興街２段２５１號如有疑問請聯繫廣益事務所客服", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 24, "label": "ADDRESS"}, {"start": 31, "end": 36, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "hard_010", "text": "鄭芸先生的包裹已送達新北市板橋區如有疑問請聯繫誠信事務所客服", "entities": [{"start": 0, "end": 4, "label": "PERSON"}, {"start": 10, "end": 16, "label": "ADDRESS"}, {"start": 23, "end": 28, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "hard_011", "text": "鍾女士的包裹已送達基隆市信義區，如有疑問請聯繫誠信股份有限公司客服。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 15, "label": "ADDRESS"}, {"start": 23, "end": 31, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "hard_012", "text": "本月請款單位匯通股份有限公司", "entities": [{"start": 6, "end": 14, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "fi_03"}
+{"id": "hard_013", "text": "本月請款單位：昇陽股份有限公司。", "entities": [{"start": 7, "end": 15, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "fi_03"}
+{"id": "hard_014", "text": "本月請款單位匯通協會", "entities": [{"start": 6, "end": 10, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "fi_03"}
+{"id": "hard_015", "text": "匯款人郭豪宇請確認收款帳戶無誤", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "fi_01"}
+{"id": "hard_016", "text": "客戶許小姐來電反映居住地址為高雄市鳳山區中正路１段１０９號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 29, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_017", "text": "匯通工作室人資部門將聯繫曹小姐安排面試地點台中市南屯區忠孝街１段１５４號", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 21, "end": 36, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "rc_03"}
+{"id": "hard_018", "text": "沈昀智女士的包裹已送達高雄市三民區中正街1段39號如有疑問請聯繫立信工作室客服", "entities": [{"start": 0, "end": 5, "label": "PERSON"}, {"start": 11, "end": 25, "label": "ADDRESS"}, {"start": 32, "end": 37, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "hard_019", "text": "姓名廖小姐", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "rc_02"}
+{"id": "hard_020", "text": "匯款人賴先生請確認收款帳戶無誤", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "fi_01"}
+{"id": "hard_021", "text": "匯款人吳小姐請確認收款帳戶無誤", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "fi_01"}
+{"id": "hard_022", "text": "姓名彭先生", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "rc_02"}
+{"id": "hard_023", "text": "客戶何豪語來電反映居住地址為台中市南屯區請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 20, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_024", "text": "本月請款單位廣益有限公司", "entities": [{"start": 6, "end": 12, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "fi_03"}
+{"id": "hard_025", "text": "客戶莊小姐來電反映居住地址為台中市北屯區中正路２段４號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 27, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_026", "text": "匯款人葉小姐請確認收款帳戶無誤", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "fi_01"}
+{"id": "hard_027", "text": "應徵者賴小姐投遞了協和診所的職缺", "entities": [{"start": 3, "end": 6, "label": "PERSON"}, {"start": 9, "end": 13, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "rc_01"}
+{"id": "hard_028", "text": "客戶彭女士來電反映，居住地址為台南市安平區，請盡快處理。", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 15, "end": 21, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_029", "text": "客戶徐婷來電反映，居住地址為桃園市八德區，請盡快處理。", "entities": [{"start": 2, "end": 4, "label": "PERSON"}, {"start": 14, "end": 20, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_030", "text": "匯款人呂瑄宇小姐請確認收款帳戶無誤", "entities": [{"start": 3, "end": 8, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "fi_01"}
+{"id": "hard_031", "text": "姓名蘇先生", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "rc_02"}
+{"id": "hard_032", "text": "蕭先生的聯絡地址為台中市北屯區和平街２段２５７號看診科別為家醫科", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 24, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "md_02"}
+{"id": "hard_033", "text": "王小姐的包裹已送達基隆市仁愛區如有疑問請聯繫集賢事務所客服", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 15, "label": "ADDRESS"}, {"start": 22, "end": 27, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "hard_034", "text": "徐明先生的戶籍地址登記為新北市三重區特此公告", "entities": [{"start": 0, "end": 4, "label": "PERSON"}, {"start": 12, "end": 18, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "ad_03"}
+{"id": "hard_035", "text": "應徵者高女士投遞了協和事務所的職缺", "entities": [{"start": 3, "end": 6, "label": "PERSON"}, {"start": 9, "end": 14, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "rc_01"}
+{"id": "hard_036", "text": "您好我是陳佳想詢問訂單狀態", "entities": [{"start": 4, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "cs_01"}
+{"id": "hard_037", "text": "本案由集賢有限公司承辦聯絡人為莊翊品", "entities": [{"start": 3, "end": 9, "label": "ORG"}, {"start": 15, "end": 18, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "ad_02"}
+{"id": "hard_038", "text": "客戶歐岑詩來電反映居住地址為新北市中和區和平街３段８９號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 28, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_039", "text": "啟明診所人資部門將聯繫劉玲安排面試地點新北市三重區", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 11, "end": 13, "label": "PERSON"}, {"start": 19, "end": 25, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "rc_03"}
+{"id": "hard_040", "text": "江女士的戶籍地址登記為桃園市八德區特此公告", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 17, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "ad_03"}
+{"id": "hard_041", "text": "張先生的包裹已送達新竹市北區如有疑問請聯繫協和基金會客服", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 14, "label": "ADDRESS"}, {"start": 21, "end": 26, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "hard_042", "text": "誠信協會已將款項匯至郭宇淑的帳戶地址核對為台中市南屯區", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 10, "end": 13, "label": "PERSON"}, {"start": 21, "end": 27, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "fi_02"}
+{"id": "hard_043", "text": "本案由集賢工作室承辦聯絡人為劉淑女士", "entities": [{"start": 3, "end": 8, "label": "ORG"}, {"start": 14, "end": 18, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "ad_02"}
+{"id": "hard_044", "text": "洪偉雅的戶籍地址登記為台南市東區特此公告", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 11, "end": 16, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "ad_03"}
+{"id": "hard_045", "text": "昇陽協會已將款項匯至邱詠的帳戶地址核對為高雄市鳳山區羅斯福街１段７２號", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 10, "end": 12, "label": "PERSON"}, {"start": 20, "end": 35, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "fi_02"}
+{"id": "hard_046", "text": "姓名廖女士", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "rc_02"}
+{"id": "hard_047", "text": "病患吳嘉預約於明日回診", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "md_01"}
+{"id": "hard_048", "text": "您好，我是邱靜，想詢問訂單狀態。", "entities": [{"start": 5, "end": 7, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "cs_01"}
+{"id": "hard_049", "text": "匯通基金會人資部門將聯繫何承傑安排面試地點新北市新莊區", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 12, "end": 15, "label": "PERSON"}, {"start": 21, "end": 27, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "rc_03"}
+{"id": "hard_050", "text": "本月請款單位廣益診所", "entities": [{"start": 6, "end": 10, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "fi_03"}
+{"id": "hard_051", "text": "病患高傑瑄預約於明日回診", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "md_01"}
+{"id": "hard_052", "text": "匯款人賴先生請確認收款帳戶無誤", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "fi_01"}
+{"id": "hard_053", "text": "廣益股份有限公司已將款項匯至劉承的帳戶地址核對為基隆市仁愛區", "entities": [{"start": 0, "end": 8, "label": "ORG"}, {"start": 14, "end": 16, "label": "PERSON"}, {"start": 24, "end": 30, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "fi_02"}
+{"id": "hard_054", "text": "匯款人許小姐請確認收款帳戶無誤", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "fi_01"}
+{"id": "hard_055", "text": "郭先生的聯絡地址為新北市三重區，看診科別為家醫科。", "entities": [{"start": 0, "end": 3, "label": "PERSON"}, {"start": 9, "end": 15, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "md_02"}
+{"id": "hard_056", "text": "病患劉先生預約於明日回診", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "md_01"}
+{"id": "hard_057", "text": "客戶蔡先生來電反映居住地址為台北市大安區建國街３段１１０號請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 29, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_058", "text": "洪偉的聯絡地址為桃園市桃園區看診科別為家醫科", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 14, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "md_02"}
+{"id": "hard_059", "text": "病患邱女士預約於明日回診", "entities": [{"start": 2, "end": 5, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "md_01"}
+{"id": "hard_060", "text": "應徵者徐芸投遞了泰安工作室的職缺", "entities": [{"start": 3, "end": 5, "label": "PERSON"}, {"start": 8, "end": 13, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "rc_01"}
+{"id": "hard_061", "text": "申請人邱先生", "entities": [{"start": 3, "end": 6, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "ad_01"}
+{"id": "hard_062", "text": "病患周昀預約於明日回診", "entities": [{"start": 2, "end": 4, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "md_01"}
+{"id": "hard_063", "text": "廣益協會人資部門將聯繫李先生安排面試，地點：台中市西屯區。", "entities": [{"start": 0, "end": 4, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 22, "end": 28, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "rc_03"}
+{"id": "hard_064", "text": "您好，我是何女士，想詢問訂單狀態。", "entities": [{"start": 5, "end": 8, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "cs_01"}
+{"id": "hard_065", "text": "病患楊詩詠女士預約於明日回診", "entities": [{"start": 2, "end": 7, "label": "PERSON"}], "tier": "hard", "seed": 42, "template_id": "md_01"}
+{"id": "hard_066", "text": "邱雅先生的聯絡地址為新北市新莊區羅斯福路２段９０號看診科別為家醫科", "entities": [{"start": 0, "end": 4, "label": "PERSON"}, {"start": 10, "end": 25, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "md_02"}
+{"id": "hard_067", "text": "客戶蘇浩涵先生來電反映居住地址為台南市安平區請盡快處理", "entities": [{"start": 2, "end": 7, "label": "PERSON"}, {"start": 16, "end": 22, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_068", "text": "客戶李先生來電反映居住地址為高雄市三民區請盡快處理", "entities": [{"start": 2, "end": 5, "label": "PERSON"}, {"start": 14, "end": 20, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "cs_02"}
+{"id": "hard_069", "text": "泰安基金會已將款項匯至劉先生的帳戶，地址核對為台北市大安區中山街２段１９７號。", "entities": [{"start": 0, "end": 5, "label": "ORG"}, {"start": 11, "end": 14, "label": "PERSON"}, {"start": 23, "end": 38, "label": "ADDRESS"}], "tier": "hard", "seed": 42, "template_id": "fi_02"}
+{"id": "hard_070", "text": "何靜的包裹已送達台中市北屯區和平街１段２９３號如有疑問請聯繫立信股份有限公司客服", "entities": [{"start": 0, "end": 2, "label": "PERSON"}, {"start": 8, "end": 23, "label": "ADDRESS"}, {"start": 30, "end": 38, "label": "ORG"}], "tier": "hard", "seed": 42, "template_id": "cs_03"}
+{"id": "negative_001", "text": "產品編號Ｐ１７５２－Ｇ，庫存數量３６件，到貨日２０２５年０５月２５日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_002", "text": "本次活動日期為２０２６年０５月２４日，報名人數上限３１９人，費用ＮＴ＄３１，８９５。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_003", "text": "本次活動日期為2026年09月25日，報名人數上限408人，費用NT$32,229。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_004", "text": "訂單編號Ａ４５９７２２１６６已出貨預計２０２４年１１月１３日送達金額ＮＴ＄９６，８４１", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_005", "text": "產品編號P1981-C，庫存數量365件，到貨日2025年02月02日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_006", "text": "訂單編號B723597716已出貨，預計2024年09月05日送達，金額NT$83,621。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_007", "text": "本次活動日期為2024年05月09日報名人數上限436人費用NT$41,388", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_008", "text": "本次活動日期為2024年04月05日，報名人數上限400人，費用NT$76,738。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_009", "text": "訂單編號F927142786已出貨，預計2024年08月10日送達，金額NT$60,831。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_010", "text": "本次活動日期為2026年12月20日，報名人數上限21人，費用NT$28,283。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_011", "text": "本次活動日期為2024年11月10日報名人數上限134人費用NT$22,889", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_012", "text": "訂單編號B596115163已出貨，預計2024年03月04日送達，金額NT$1,667。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_013", "text": "訂單編號Ｆ８３６８９３１８５已出貨，預計２０２６年１１月０３日送達，金額ＮＴ＄７６，４２６。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_014", "text": "產品編號Ｐ８２６５－Ｃ，庫存數量４８件，到貨日２０２５年０２月０２日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_015", "text": "本次活動日期為2025年01月13日報名人數上限350人費用NT$56,023", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_016", "text": "訂單編號Ｃ１３７２０４５５２已出貨，預計２０２６年１０月２０日送達，金額ＮＴ＄３２，３１５。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_017", "text": "產品編號P5583-G，庫存數量71件，到貨日2025年04月21日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_018", "text": "產品編號P7266-F，庫存數量246件，到貨日2026年08月12日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_019", "text": "產品編號Ｐ４５８８－Ａ，庫存數量４５９件，到貨日２０２５年０１月２６日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_020", "text": "本次活動日期為2024年04月22日，報名人數上限124人，費用NT$35,034。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_021", "text": "產品編號Ｐ４５９４－Ｇ，庫存數量１８２件，到貨日２０２４年０３月０８日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_022", "text": "產品編號P6761-C，庫存數量289件，到貨日2024年08月18日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_023", "text": "本次活動日期為２０２４年０９月１６日，報名人數上限１人，費用ＮＴ＄４３，５８１。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_024", "text": "產品編號P6301-A，庫存數量12件，到貨日2024年10月23日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_025", "text": "訂單編號F856491925已出貨，預計2026年07月19日送達，金額NT$13,342。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_026", "text": "本次活動日期為２０２６年０８月２１日，報名人數上限１６３人，費用ＮＴ＄２２，９３３。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_027", "text": "產品編號P4657-C，庫存數量194件，到貨日2025年12月23日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_028", "text": "本次活動日期為2025年10月02日報名人數上限94人費用NT$79,056", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_029", "text": "本次活動日期為２０２５年０３月１１日，報名人數上限３８２人，費用ＮＴ＄１０，２９８。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_030", "text": "訂單編號F579565240已出貨，預計2024年05月07日送達，金額NT$32,807。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_031", "text": "產品編號Ｐ７３２３－Ｈ庫存數量３７６件到貨日２０２５年０３月１４日", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_032", "text": "本次活動日期為2026年11月25日，報名人數上限352人，費用NT$29,667。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_033", "text": "訂單編號Ｅ２１２４４７６６５已出貨，預計２０２４年０６月０６日送達，金額ＮＴ＄４９，３１２。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_034", "text": "訂單編號H856456108已出貨，預計2024年07月21日送達，金額NT$21,726。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_035", "text": "產品編號Ｐ４１１２－Ｇ，庫存數量３５７件，到貨日２０２６年１２月２４日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_036", "text": "產品編號Ｐ９０４３－Ｃ，庫存數量２８件，到貨日２０２５年０１月１４日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_037", "text": "訂單編號A322214072已出貨，預計2024年11月10日送達，金額NT$10,839。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_038", "text": "本次活動日期為2026年05月03日，報名人數上限329人，費用NT$71,419。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_039", "text": "本次活動日期為2025年08月15日，報名人數上限135人，費用NT$29,754。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_040", "text": "本次活動日期為2026年06月26日，報名人數上限278人，費用NT$54,362。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_041", "text": "產品編號P9773-H，庫存數量294件，到貨日2024年08月10日。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_042", "text": "訂單編號Ｃ２２９１５１６７４已出貨，預計２０２５年０３月０６日送達，金額ＮＴ＄２７，８７２。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_043", "text": "訂單編號C995616775已出貨預計2026年05月11日送達金額NT$95,402", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_044", "text": "訂單編號H113275526已出貨預計2026年10月19日送達金額NT$68,593", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_045", "text": "本次活動日期為2024年02月19日報名人數上限400人費用NT$13,337", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_046", "text": "本次活動日期為2026年08月19日，報名人數上限312人，費用NT$62,103。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_02"}
+{"id": "negative_047", "text": "訂單編號G141642429已出貨，預計2025年06月23日送達，金額NT$31,239。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_048", "text": "訂單編號E433879270已出貨，預計2025年08月28日送達，金額NT$91,350。", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_01"}
+{"id": "negative_049", "text": "產品編號Ｐ８２５９－Ｆ庫存數量１３８件到貨日２０２６年０７月２０日", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
+{"id": "negative_050", "text": "產品編號P8937-F庫存數量421件到貨日2024年09月26日", "entities": [], "tier": "negative", "seed": 42, "template_id": "neg_03"}
