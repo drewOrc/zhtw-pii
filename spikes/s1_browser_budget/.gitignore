@@ -1,0 +1,16 @@
+# Model weights: kept out of git per repo policy (root .gitignore already
+# blocks *.onnx/*.safetensors/*.bin/*.pt; this also blocks the directory
+# tree and any non-weight files that ride along with a snapshot download).
+models/
+
+# Node dependencies, reinstalled from package.json + package-lock.json.
+node_modules/
+
+# transformers.js runtime copied from node_modules to avoid CDN variance;
+# regenerate with: cp node_modules/@huggingface/transformers/dist/transformers.min.js web/vendor/
+# and the two ort-wasm-simd-threaded.asyncify.* files from node_modules/onnxruntime-web/dist/.
+web/vendor/
+
+# Local Python env if a .venv is created here instead of using uv run --with-requirements.
+.venv/
+__pycache__/

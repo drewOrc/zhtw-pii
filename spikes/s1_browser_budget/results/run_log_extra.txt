@@ -1,0 +1,14 @@
+Static server on http://127.0.0.1:52231
+Chromium launched: 153.0.8010.12
+  desktop-unthrottled rep 1/3: cold_load_ms=355.8
+  desktop-unthrottled rep 2/3: cold_load_ms=325.9
+  desktop-unthrottled rep 3/3: cold_load_ms=342.0
+  mobile-4g rep 1/3: cold_load_ms=34029.7
+  mobile-4g rep 2/3: cold_load_ms=34006.4
+  mobile-4g rep 3/3: cold_load_ms=34016.9
+  mobile-fast3g rep 1/3: cold_load_ms=ERROR
+  mobile-fast3g rep 2/3: cold_load_ms=ERROR
+  mobile-fast3g rep 3/3: cold_load_ms=ERROR
+  fp32 anchor (mobile-4g): cold_load_ms=75349.3
+  HF Hub direct: cold_load_ms=3959.7
+Wrote results/s1_results_extra.json
