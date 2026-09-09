@@ -1,0 +1,6 @@
+Static server on http://127.0.0.1:52210
+Chromium launched: 153.0.8010.12
+  mobile-fast3g (corrected timeout) rep 1/3: cold_load_ms=179595.5
+  mobile-fast3g (corrected timeout) rep 2/3: cold_load_ms=179610.0
+  mobile-fast3g (corrected timeout) rep 3/3: cold_load_ms=179609.2
+Wrote results/s1_results_bert_tiny_fast3g_fixup.json

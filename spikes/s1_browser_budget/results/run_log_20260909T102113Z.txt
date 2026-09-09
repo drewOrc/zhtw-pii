@@ -1,0 +1,46 @@
+Loaded 100 sentences from /Users/drewchen/Documents/workspace/research/zhtw-pii/data/testset/v0/test.jsonl
+Static server on http://127.0.0.1:51835, root /Users/drewchen/Documents/workspace/research/zhtw-pii/spikes/s1_browser_budget
+Chromium launched: 153.0.8010.12
+
+=== ckip-albert-tiny-ner (task=token-classification) ===
+  probe: desktop-unthrottled q8 local
+  UNSUPPORTED: Error: Unsupported model type: albert
+
+=== ckip-bert-tiny-ner (task=token-classification) ===
+  probe: desktop-unthrottled q8 local
+  probe ok: cold_load_ms=343.6
+  desktop-unthrottled rep 2/3: cold_load_ms=320.5
+  desktop-unthrottled rep 3/3: cold_load_ms=322.6
+  mobile-4g rep 1/3: cold_load_ms=29170.0
+  mobile-4g rep 2/3: cold_load_ms=29176.1
+  mobile-4g rep 3/3: cold_load_ms=29165.4
+  mobile-fast3g rep 1/3: TIMED OUT at 180000ms
+  mobile-fast3g rep 2/3: TIMED OUT at 180000ms
+  mobile-fast3g rep 3/3: TIMED OUT at 180000ms
+  fp32 anchor (mobile-4g): cold_load_ms=56641.3
+
+=== xenova-bert-base-chinese (task=feature-extraction) ===
+  probe: desktop-unthrottled q8 local
+  probe ok: cold_load_ms=628.6
+  desktop-unthrottled rep 2/3: cold_load_ms=562.2
+  desktop-unthrottled rep 3/3: cold_load_ms=643.6
+  mobile-4g rep 1/3: cold_load_ms=102960.8
+  mobile-4g rep 2/3: cold_load_ms=102959.6
+  mobile-4g rep 3/3: cold_load_ms=102964.2
+  mobile-fast3g rep 1/1: TIMED OUT at 90000ms
+  fp32 not measured (large tier); calculated estimate = 406920ms
+  HF Hub direct (real network, no CDP throttle): cold_load_ms=8876.8
+
+=== xenova-mbert-ner-hrl (task=token-classification) ===
+  probe: desktop-unthrottled q8 local
+  probe ok: cold_load_ms=759.3
+  desktop-unthrottled rep 2/3: cold_load_ms=720.7
+  desktop-unthrottled rep 3/3: cold_load_ms=723.8
+  mobile-4g rep 1/3: cold_load_ms=164984.5
+  mobile-4g rep 2/3: cold_load_ms=164992.5
+  mobile-4g rep 3/3: cold_load_ms=164986.3
+  mobile-fast3g rep 1/1: TIMED OUT at 90000ms
+  fp32 not measured (large tier); calculated estimate = 655660ms
+  HF Hub direct (real network, no CDP throttle): cold_load_ms=13489.4
+
+Wrote /Users/drewchen/Documents/workspace/research/zhtw-pii/spikes/s1_browser_budget/results/s1_results.json
