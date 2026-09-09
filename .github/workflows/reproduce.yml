@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Install uv (reads .python-version for the Python toolchain)
-        uses: astral-sh/setup-uv@v10
+        uses: astral-sh/setup-uv@v10.0.1
         with:
           enable-cache: true
 
