@@ -1,0 +1,12 @@
+{
+  "name": "s2-tokenizer-parity",
+  "private": true,
+  "type": "module",
+  "description": "Spike: does transformers.js tokenize zh-TW text identically to the Python tokenizers library, for the same tokenizer.json file?",
+  "scripts": {
+    "run": "node scripts/run_node_side.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.2.0"
+  }
+}

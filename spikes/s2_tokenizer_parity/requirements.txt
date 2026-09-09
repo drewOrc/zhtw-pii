@@ -1,0 +1,12 @@
+# Pinned exact versions. Only the fast-tokenizer library and the Hub
+# download client are required; no torch/tensorflow/flax (no model
+# weights are loaded in this spike, only tokenizer.json files).
+huggingface_hub==1.30.0
+tokenizers==0.23.2
+
+# Optional cross-check only (see scripts/cross_check_transformers.py):
+# confirms transformers' AutoTokenizer wrapper applies the same
+# normalization as loading tokenizer.json directly with `tokenizers`.
+# transformers does not require torch to load a tokenizer, only to load
+# model weights, so this stays torch-free.
+transformers==5.16.1
