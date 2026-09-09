@@ -26,14 +26,18 @@ dev = [
 
 [tool.ruff]
 line-length = 100
+# Spikes are self-contained experiments with their own environments; see spikes/README.md.
+extend-exclude = ["spikes"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
 
 [tool.pyright]
 typeCheckingMode = "basic"
+exclude = ["spikes", ".venv"]
 
 [tool.pytest.ini_options]
+testpaths = ["tests"]
 markers = [
     "unit: fast, no network, no filesystem outside tmp_path",
     "integration: needs a real model or external process",
