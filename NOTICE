@@ -1,0 +1,32 @@
+NOTICE
+
+zhtw-pii
+Copyright (c) 2026 Bo-Yu Chen
+Licensed under the MIT License (see LICENSE).
+
+This file lists the licenses of Day 0 dependencies, as resolved in
+uv.lock on 2026-09-09. It will grow to cover the model backbone and any
+baseline tools vendored or bundled from M1 onward (see internal/PLAN.md
+section 4.4 and risk R8).
+
+Runtime dependencies:
+  pydantic-settings 2.15.0   MIT
+  pydantic 2.13.5            MIT
+  pydantic_core 2.46.5       MIT
+  python-dotenv 1.2.3        BSD-3-Clause
+  typing-inspection 0.4.4    MIT
+  typing_extensions 4.16.0   PSF-2.0
+  annotated-types 0.8.0      MIT
+
+Development dependencies (not distributed with the package):
+  pytest 9.1.1     MIT
+  ruff 0.16.6      MIT
+  pyright 1.1.411  MIT
+  iniconfig 2.3.0  MIT
+  packaging 26.3   Apache-2.0 OR BSD-2-Clause
+  pluggy 1.6.0     MIT
+  Pygments 2.21.0  BSD-2-Clause
+  nodeenv 1.10.0   BSD
+
+Full license texts are available from each project's own repository or
+from the Python Package Index (https://pypi.org/project/<name>/).

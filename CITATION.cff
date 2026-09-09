@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "zhtw-pii: Traditional Chinese PII and Sensitive-Entity Detection for LLM Pre-processing"
+authors:
+  - family-names: "Chen"
+    given-names: "Bo-Yu"
+date-released: 2026-09-09
+version: "0.1.0"
+repository-code: "https://github.com/drewOrc/zhtw-pii"
+license: MIT
