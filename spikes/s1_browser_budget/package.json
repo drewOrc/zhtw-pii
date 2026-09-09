@@ -1,0 +1,16 @@
+{
+  "name": "s1-browser-budget",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Spike S1: browser model size budget for zhtw-pii, measured with Playwright and transformers.js.",
+  "type": "module",
+  "scripts": {
+    "bench": "node scripts/run_benchmark.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.2.0"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
