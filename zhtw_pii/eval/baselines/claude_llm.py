@@ -2,24 +2,24 @@
 
 Requires `ANTHROPIC_API_KEY`. Without it, `load()` raises
 `BaselineUnavailable("ANTHROPIC_API_KEY not set")` and the runner writes
-an "unevaluated" result. This milestone (M1, Issue #3) exercises only
-that no-key path plus the JSON-parsing logic against a mocked response,
-never a real API call; see tests/test_eval_llm_baseline.py.
+an "unevaluated" result. The test suite exercises only that no-key path
+plus the JSON-parsing logic directly, never a real API call; see
+tests/test_eval_llm_baseline.py.
 
 Model id: the task brief for this baseline named
 `claude-haiku-4-5-20251001`. Current Anthropic model ids for models still
-being served do not carry a date suffix (a dated variant is very likely
-to 404 against a real deployment); the live-served id is
-`claude-haiku-4-5`, used here instead. `MODEL_ID` is a module constant so
-pointing this at a different id is a one-line change. The first real run
-made with an API key must confirm `MODEL_ID` actually resolves against the
-live API before its output is trusted; nothing in this module or its tests
-calls the real API.
+being served do not carry a date suffix; the live-served id is
+`claude-haiku-4-5`, used here instead, and it resolved on the first real
+run made with a key, no date-suffixed fallback needed (see
+`results/benchmark/v0/llm.json`'s `metadata.model_id`). `MODEL_ID` is a
+module constant so pointing this at a different id is a one-line change.
 
 `predict()` uses `output_config: {"format": {"type": "json_schema", ...}}`
 (structured outputs) rather than prompting for JSON and hoping, so a
 malformed top-level response is a genuine API-contract violation, not a
-prompting failure.
+prompting failure; `_parse_or_count_failure()` absorbs one anyway rather
+than failing the whole 300-example run over it (see that method's
+docstring).
 """
 
 from __future__ import annotations
