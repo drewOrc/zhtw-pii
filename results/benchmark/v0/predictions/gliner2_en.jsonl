@@ -1,0 +1,300 @@
+{"id": "easy_001", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_002", "spans": [{"end": 13, "label": "ORG", "start": 7}]}
+{"id": "easy_003", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_004", "spans": []}
+{"id": "easy_005", "spans": []}
+{"id": "easy_006", "spans": []}
+{"id": "easy_007", "spans": []}
+{"id": "easy_008", "spans": []}
+{"id": "easy_009", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_010", "spans": []}
+{"id": "easy_011", "spans": [{"end": 12, "label": "ORG", "start": 7}]}
+{"id": "easy_012", "spans": []}
+{"id": "easy_013", "spans": []}
+{"id": "easy_014", "spans": []}
+{"id": "easy_015", "spans": []}
+{"id": "easy_016", "spans": []}
+{"id": "easy_017", "spans": []}
+{"id": "easy_018", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_019", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_020", "spans": [{"end": 6, "label": "PERSON", "start": 3}]}
+{"id": "easy_021", "spans": []}
+{"id": "easy_022", "spans": []}
+{"id": "easy_023", "spans": [{"end": 7, "label": "PERSON", "start": 4}]}
+{"id": "easy_024", "spans": [{"end": 11, "label": "ORG", "start": 7}]}
+{"id": "easy_025", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_026", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_027", "spans": []}
+{"id": "easy_028", "spans": [{"end": 15, "label": "ORG", "start": 7}]}
+{"id": "easy_029", "spans": [{"end": 12, "label": "ORG", "start": 7}]}
+{"id": "easy_030", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_031", "spans": []}
+{"id": "easy_032", "spans": []}
+{"id": "easy_033", "spans": []}
+{"id": "easy_034", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_035", "spans": [{"end": 11, "label": "PERSON", "start": 0}]}
+{"id": "easy_036", "spans": []}
+{"id": "easy_037", "spans": []}
+{"id": "easy_038", "spans": []}
+{"id": "easy_039", "spans": []}
+{"id": "easy_040", "spans": []}
+{"id": "easy_041", "spans": []}
+{"id": "easy_042", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_043", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_044", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_045", "spans": []}
+{"id": "easy_046", "spans": []}
+{"id": "easy_047", "spans": []}
+{"id": "easy_048", "spans": []}
+{"id": "easy_049", "spans": []}
+{"id": "easy_050", "spans": []}
+{"id": "easy_051", "spans": [{"end": 6, "label": "PERSON", "start": 3}]}
+{"id": "easy_052", "spans": []}
+{"id": "easy_053", "spans": [{"end": 5, "label": "PERSON", "start": 3}]}
+{"id": "easy_054", "spans": []}
+{"id": "easy_055", "spans": [{"end": 7, "label": "PERSON", "start": 4}]}
+{"id": "easy_056", "spans": []}
+{"id": "easy_057", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_058", "spans": []}
+{"id": "easy_059", "spans": [{"end": 7, "label": "PERSON", "start": 4}]}
+{"id": "easy_060", "spans": []}
+{"id": "easy_061", "spans": []}
+{"id": "easy_062", "spans": [{"end": 11, "label": "ORG", "start": 7}]}
+{"id": "easy_063", "spans": []}
+{"id": "easy_064", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_065", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_066", "spans": [{"end": 7, "label": "PERSON", "start": 4}]}
+{"id": "easy_067", "spans": []}
+{"id": "easy_068", "spans": [{"end": 6, "label": "PERSON", "start": 4}]}
+{"id": "easy_069", "spans": []}
+{"id": "easy_070", "spans": [{"end": 7, "label": "PERSON", "start": 4}]}
+{"id": "easy_071", "spans": []}
+{"id": "easy_072", "spans": []}
+{"id": "easy_073", "spans": []}
+{"id": "easy_074", "spans": [{"end": 12, "label": "ORG", "start": 7}]}
+{"id": "easy_075", "spans": [{"end": 7, "label": "PERSON", "start": 4}]}
+{"id": "easy_076", "spans": [{"end": 6, "label": "PERSON", "start": 3}]}
+{"id": "easy_077", "spans": []}
+{"id": "easy_078", "spans": []}
+{"id": "easy_079", "spans": [{"end": 7, "label": "PERSON", "start": 4}]}
+{"id": "easy_080", "spans": []}
+{"id": "medium_001", "spans": [{"end": 32, "label": "PERSON", "start": 0}]}
+{"id": "medium_002", "spans": [{"end": 19, "label": "ORG", "start": 0}]}
+{"id": "medium_003", "spans": []}
+{"id": "medium_004", "spans": []}
+{"id": "medium_005", "spans": [{"end": 30, "label": "PERSON", "start": 0}]}
+{"id": "medium_006", "spans": []}
+{"id": "medium_007", "spans": [{"end": 17, "label": "ORG", "start": 0}]}
+{"id": "medium_008", "spans": [{"end": 25, "label": "PERSON", "start": 0}]}
+{"id": "medium_009", "spans": [{"end": 18, "label": "ORG", "start": 0}]}
+{"id": "medium_010", "spans": [{"end": 32, "label": "PERSON", "start": 0}]}
+{"id": "medium_011", "spans": []}
+{"id": "medium_012", "spans": []}
+{"id": "medium_013", "spans": []}
+{"id": "medium_014", "spans": [{"end": 19, "label": "ORG", "start": 0}, {"end": 37, "label": "ADDRESS", "start": 23}]}
+{"id": "medium_015", "spans": []}
+{"id": "medium_016", "spans": [{"end": 22, "label": "PERSON", "start": 0}]}
+{"id": "medium_017", "spans": []}
+{"id": "medium_018", "spans": []}
+{"id": "medium_019", "spans": []}
+{"id": "medium_020", "spans": [{"end": 16, "label": "ORG", "start": 0}]}
+{"id": "medium_021", "spans": [{"end": 18, "label": "ORG", "start": 0}]}
+{"id": "medium_022", "spans": [{"end": 18, "label": "ORG", "start": 0}]}
+{"id": "medium_023", "spans": []}
+{"id": "medium_024", "spans": [{"end": 16, "label": "ORG", "start": 0}]}
+{"id": "medium_025", "spans": []}
+{"id": "medium_026", "spans": [{"end": 23, "label": "PERSON", "start": 0}]}
+{"id": "medium_027", "spans": []}
+{"id": "medium_028", "spans": [{"end": 18, "label": "ORG", "start": 0}]}
+{"id": "medium_029", "spans": [{"end": 37, "label": "ORG", "start": 0}]}
+{"id": "medium_030", "spans": []}
+{"id": "medium_031", "spans": [{"end": 23, "label": "PERSON", "start": 0}]}
+{"id": "medium_032", "spans": [{"end": 17, "label": "ORG", "start": 0}]}
+{"id": "medium_033", "spans": [{"end": 23, "label": "PERSON", "start": 0}]}
+{"id": "medium_034", "spans": [{"end": 25, "label": "PERSON", "start": 0}]}
+{"id": "medium_035", "spans": []}
+{"id": "medium_036", "spans": [{"end": 33, "label": "PERSON", "start": 0}]}
+{"id": "medium_037", "spans": []}
+{"id": "medium_038", "spans": []}
+{"id": "medium_039", "spans": []}
+{"id": "medium_040", "spans": [{"end": 37, "label": "ORG", "start": 0}]}
+{"id": "medium_041", "spans": [{"end": 30, "label": "PERSON", "start": 0}]}
+{"id": "medium_042", "spans": [{"end": 30, "label": "PERSON", "start": 0}]}
+{"id": "medium_043", "spans": []}
+{"id": "medium_044", "spans": [{"end": 31, "label": "PERSON", "start": 0}]}
+{"id": "medium_045", "spans": []}
+{"id": "medium_046", "spans": []}
+{"id": "medium_047", "spans": [{"end": 21, "label": "ORG", "start": 0}]}
+{"id": "medium_048", "spans": []}
+{"id": "medium_049", "spans": []}
+{"id": "medium_050", "spans": [{"end": 34, "label": "ORG", "start": 0}]}
+{"id": "medium_051", "spans": [{"end": 20, "label": "ORG", "start": 0}]}
+{"id": "medium_052", "spans": [{"end": 24, "label": "PERSON", "start": 0}]}
+{"id": "medium_053", "spans": []}
+{"id": "medium_054", "spans": []}
+{"id": "medium_055", "spans": [{"end": 17, "label": "ORG", "start": 0}]}
+{"id": "medium_056", "spans": []}
+{"id": "medium_057", "spans": []}
+{"id": "medium_058", "spans": [{"end": 26, "label": "PERSON", "start": 0}]}
+{"id": "medium_059", "spans": [{"end": 37, "label": "PERSON", "start": 0}]}
+{"id": "medium_060", "spans": [{"end": 22, "label": "PERSON", "start": 0}]}
+{"id": "medium_061", "spans": []}
+{"id": "medium_062", "spans": [{"end": 30, "label": "PERSON", "start": 0}]}
+{"id": "medium_063", "spans": []}
+{"id": "medium_064", "spans": [{"end": 36, "label": "ORG", "start": 0}]}
+{"id": "medium_065", "spans": [{"end": 23, "label": "PERSON", "start": 0}]}
+{"id": "medium_066", "spans": []}
+{"id": "medium_067", "spans": []}
+{"id": "medium_068", "spans": [{"end": 23, "label": "PERSON", "start": 0}]}
+{"id": "medium_069", "spans": [{"end": 26, "label": "PERSON", "start": 0}]}
+{"id": "medium_070", "spans": []}
+{"id": "medium_071", "spans": []}
+{"id": "medium_072", "spans": []}
+{"id": "medium_073", "spans": []}
+{"id": "medium_074", "spans": [{"end": 17, "label": "ORG", "start": 0}]}
+{"id": "medium_075", "spans": []}
+{"id": "medium_076", "spans": []}
+{"id": "medium_077", "spans": []}
+{"id": "medium_078", "spans": []}
+{"id": "medium_079", "spans": [{"end": 22, "label": "ORG", "start": 0}]}
+{"id": "medium_080", "spans": []}
+{"id": "medium_081", "spans": []}
+{"id": "medium_082", "spans": []}
+{"id": "medium_083", "spans": []}
+{"id": "medium_084", "spans": []}
+{"id": "medium_085", "spans": [{"end": 36, "label": "ORG", "start": 0}]}
+{"id": "medium_086", "spans": []}
+{"id": "medium_087", "spans": [{"end": 35, "label": "ORG", "start": 0}]}
+{"id": "medium_088", "spans": []}
+{"id": "medium_089", "spans": []}
+{"id": "medium_090", "spans": [{"end": 17, "label": "ORG", "start": 0}]}
+{"id": "medium_091", "spans": []}
+{"id": "medium_092", "spans": []}
+{"id": "medium_093", "spans": [{"end": 24, "label": "PERSON", "start": 0}]}
+{"id": "medium_094", "spans": []}
+{"id": "medium_095", "spans": [{"end": 20, "label": "ORG", "start": 0}]}
+{"id": "medium_096", "spans": []}
+{"id": "medium_097", "spans": []}
+{"id": "medium_098", "spans": [{"end": 19, "label": "ORG", "start": 0}]}
+{"id": "medium_099", "spans": [{"end": 18, "label": "ORG", "start": 0}]}
+{"id": "medium_100", "spans": []}
+{"id": "hard_001", "spans": [{"end": 19, "label": "PERSON", "start": 0}]}
+{"id": "hard_002", "spans": []}
+{"id": "hard_003", "spans": []}
+{"id": "hard_004", "spans": []}
+{"id": "hard_005", "spans": []}
+{"id": "hard_006", "spans": []}
+{"id": "hard_007", "spans": []}
+{"id": "hard_008", "spans": [{"end": 21, "label": "PERSON", "start": 0}]}
+{"id": "hard_009", "spans": []}
+{"id": "hard_010", "spans": []}
+{"id": "hard_011", "spans": [{"end": 15, "label": "PERSON", "start": 0}]}
+{"id": "hard_012", "spans": []}
+{"id": "hard_013", "spans": [{"end": 15, "label": "ORG", "start": 7}]}
+{"id": "hard_014", "spans": []}
+{"id": "hard_015", "spans": []}
+{"id": "hard_016", "spans": []}
+{"id": "hard_017", "spans": []}
+{"id": "hard_018", "spans": []}
+{"id": "hard_019", "spans": []}
+{"id": "hard_020", "spans": []}
+{"id": "hard_021", "spans": []}
+{"id": "hard_022", "spans": []}
+{"id": "hard_023", "spans": []}
+{"id": "hard_024", "spans": []}
+{"id": "hard_025", "spans": []}
+{"id": "hard_026", "spans": []}
+{"id": "hard_027", "spans": []}
+{"id": "hard_028", "spans": []}
+{"id": "hard_029", "spans": []}
+{"id": "hard_030", "spans": []}
+{"id": "hard_031", "spans": []}
+{"id": "hard_032", "spans": [{"end": 32, "label": "PERSON", "start": 0}]}
+{"id": "hard_033", "spans": [{"end": 29, "label": "PERSON", "start": 0}]}
+{"id": "hard_034", "spans": [{"end": 22, "label": "PERSON", "start": 0}]}
+{"id": "hard_035", "spans": []}
+{"id": "hard_036", "spans": []}
+{"id": "hard_037", "spans": []}
+{"id": "hard_038", "spans": []}
+{"id": "hard_039", "spans": []}
+{"id": "hard_040", "spans": [{"end": 21, "label": "PERSON", "start": 0}]}
+{"id": "hard_041", "spans": [{"end": 28, "label": "PERSON", "start": 0}]}
+{"id": "hard_042", "spans": [{"end": 27, "label": "ORG", "start": 0}]}
+{"id": "hard_043", "spans": []}
+{"id": "hard_044", "spans": [{"end": 20, "label": "PERSON", "start": 0}]}
+{"id": "hard_045", "spans": [{"end": 35, "label": "ORG", "start": 0}]}
+{"id": "hard_046", "spans": []}
+{"id": "hard_047", "spans": []}
+{"id": "hard_048", "spans": []}
+{"id": "hard_049", "spans": []}
+{"id": "hard_050", "spans": []}
+{"id": "hard_051", "spans": []}
+{"id": "hard_052", "spans": []}
+{"id": "hard_053", "spans": [{"end": 30, "label": "ORG", "start": 0}]}
+{"id": "hard_054", "spans": []}
+{"id": "hard_055", "spans": [{"end": 15, "label": "PERSON", "start": 0}]}
+{"id": "hard_056", "spans": []}
+{"id": "hard_057", "spans": []}
+{"id": "hard_058", "spans": [{"end": 22, "label": "PERSON", "start": 0}]}
+{"id": "hard_059", "spans": []}
+{"id": "hard_060", "spans": []}
+{"id": "hard_061", "spans": []}
+{"id": "hard_062", "spans": []}
+{"id": "hard_063", "spans": [{"end": 18, "label": "ORG", "start": 0}, {"end": 28, "label": "ADDRESS", "start": 22}]}
+{"id": "hard_064", "spans": []}
+{"id": "hard_065", "spans": []}
+{"id": "hard_066", "spans": [{"end": 33, "label": "PERSON", "start": 0}]}
+{"id": "hard_067", "spans": []}
+{"id": "hard_068", "spans": []}
+{"id": "hard_069", "spans": [{"end": 17, "label": "ORG", "start": 0}]}
+{"id": "hard_070", "spans": []}
+{"id": "negative_001", "spans": []}
+{"id": "negative_002", "spans": []}
+{"id": "negative_003", "spans": []}
+{"id": "negative_004", "spans": []}
+{"id": "negative_005", "spans": []}
+{"id": "negative_006", "spans": []}
+{"id": "negative_007", "spans": []}
+{"id": "negative_008", "spans": []}
+{"id": "negative_009", "spans": []}
+{"id": "negative_010", "spans": []}
+{"id": "negative_011", "spans": []}
+{"id": "negative_012", "spans": []}
+{"id": "negative_013", "spans": []}
+{"id": "negative_014", "spans": []}
+{"id": "negative_015", "spans": []}
+{"id": "negative_016", "spans": []}
+{"id": "negative_017", "spans": []}
+{"id": "negative_018", "spans": []}
+{"id": "negative_019", "spans": []}
+{"id": "negative_020", "spans": []}
+{"id": "negative_021", "spans": []}
+{"id": "negative_022", "spans": []}
+{"id": "negative_023", "spans": []}
+{"id": "negative_024", "spans": []}
+{"id": "negative_025", "spans": []}
+{"id": "negative_026", "spans": []}
+{"id": "negative_027", "spans": []}
+{"id": "negative_028", "spans": []}
+{"id": "negative_029", "spans": []}
+{"id": "negative_030", "spans": []}
+{"id": "negative_031", "spans": []}
+{"id": "negative_032", "spans": []}
+{"id": "negative_033", "spans": []}
+{"id": "negative_034", "spans": []}
+{"id": "negative_035", "spans": []}
+{"id": "negative_036", "spans": []}
+{"id": "negative_037", "spans": []}
+{"id": "negative_038", "spans": []}
+{"id": "negative_039", "spans": []}
+{"id": "negative_040", "spans": []}
+{"id": "negative_041", "spans": []}
+{"id": "negative_042", "spans": []}
+{"id": "negative_043", "spans": []}
+{"id": "negative_044", "spans": []}
+{"id": "negative_045", "spans": []}
+{"id": "negative_046", "spans": []}
+{"id": "negative_047", "spans": []}
+{"id": "negative_048", "spans": []}
+{"id": "negative_049", "spans": []}
+{"id": "negative_050", "spans": []}

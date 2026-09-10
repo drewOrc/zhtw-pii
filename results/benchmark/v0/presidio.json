@@ -1,0 +1,145 @@
+{
+  "baseline": "presidio",
+  "config": {
+    "label_mapping": {
+      "GPE": "ADDRESS",
+      "LOCATION": "ADDRESS",
+      "ORG": "ORG",
+      "ORGANIZATION": "ORG",
+      "PERSON": "PERSON"
+    },
+    "params": {
+      "entities": [
+        "PERSON",
+        "LOCATION",
+        "GPE",
+        "ORGANIZATION",
+        "ORG"
+      ],
+      "language": "zh",
+      "model_priority": [
+        "zh_core_web_lg",
+        "zh_core_web_md",
+        "zh_core_web_sm"
+      ]
+    }
+  },
+  "latency_ms": {
+    "mean": 3.5623,
+    "n": 290,
+    "p50": 3.5901,
+    "p95": 5.6983,
+    "warmup": 10
+  },
+  "metadata": {
+    "bytes_sent": null,
+    "data_leaves_machine": false,
+    "date_utc": "2026-09-10T02:41:14Z",
+    "hardware": "macOS-26.6.2-arm64-arm-64bit (arm)",
+    "model_id": "presidio+spacy:zh_core_web_lg",
+    "model_version": "3.8.0",
+    "n_examples": 300,
+    "package_versions": {
+      "presidio_analyzer": "2.2.364",
+      "spacy": "3.8.16",
+      "zh_core_web_lg": "3.8.0"
+    },
+    "python": "3.11.14",
+    "size_mb": 663.22,
+    "testset_path": "data/testset/v0/test.jsonl",
+    "testset_sha256": "84025f8e7fd50c905258864c3a93349f565e17a75b208f98ad29f431656d69f6"
+  },
+  "metrics": {
+    "by_tier": {
+      "easy": {
+        "exact_micro_f1": 0.4741,
+        "overlap_micro_f1": 0.5778
+      },
+      "hard": {
+        "exact_micro_f1": 0.1617,
+        "overlap_micro_f1": 0.6979
+      },
+      "medium": {
+        "exact_micro_f1": 0.1851,
+        "overlap_micro_f1": 0.6682
+      }
+    },
+    "exact": {
+      "ADDRESS": {
+        "f1": 0.0236,
+        "fn": 113,
+        "fp": 135,
+        "p": 0.0217,
+        "r": 0.0259,
+        "tp": 3
+      },
+      "ORG": {
+        "f1": 0.4125,
+        "fn": 66,
+        "fp": 28,
+        "p": 0.541,
+        "r": 0.3333,
+        "tp": 33
+      },
+      "PERSON": {
+        "f1": 0.2718,
+        "fn": 182,
+        "fp": 118,
+        "p": 0.3218,
+        "r": 0.2353,
+        "tp": 56
+      },
+      "micro": {
+        "f1": 0.2228,
+        "fn": 361,
+        "fp": 281,
+        "p": 0.2466,
+        "r": 0.2031,
+        "tp": 92
+      }
+    },
+    "false_entities_per_1000_chars": 36.5885,
+    "negatives": {
+      "examples_with_any_prediction": 12,
+      "fpr": 0.24,
+      "n": 50
+    },
+    "overlap": {
+      "ADDRESS": {
+        "f1": 0.811,
+        "fn": 13,
+        "fp": 35,
+        "p": 0.7464,
+        "r": 0.8879,
+        "tp": 103
+      },
+      "ORG": {
+        "f1": 0.525,
+        "fn": 57,
+        "fp": 19,
+        "p": 0.6885,
+        "r": 0.4242,
+        "tp": 42
+      },
+      "PERSON": {
+        "f1": 0.6019,
+        "fn": 114,
+        "fp": 50,
+        "p": 0.7126,
+        "r": 0.521,
+        "tp": 124
+      },
+      "micro": {
+        "f1": 0.6513,
+        "fn": 184,
+        "fp": 104,
+        "p": 0.7212,
+        "r": 0.5938,
+        "tp": 269
+      }
+    }
+  },
+  "predictions_path": "results/benchmark/v0/predictions/presidio.jsonl",
+  "reason": null,
+  "status": "evaluated"
+}

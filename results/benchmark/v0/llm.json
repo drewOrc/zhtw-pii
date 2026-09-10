@@ -1,0 +1,35 @@
+{
+  "baseline": "llm",
+  "config": {
+    "label_mapping": {
+      "ADDRESS": "ADDRESS",
+      "ORG": "ORG",
+      "PERSON": "PERSON"
+    },
+    "params": {
+      "few_shot_examples": 4,
+      "max_tokens": 4096,
+      "model": "claude-haiku-4-5",
+      "structured_output": "json_schema"
+    }
+  },
+  "latency_ms": null,
+  "metadata": {
+    "bytes_sent": null,
+    "data_leaves_machine": null,
+    "date_utc": "2026-09-10T02:42:10Z",
+    "hardware": "macOS-26.6.2-arm64-arm-64bit (arm)",
+    "model_id": null,
+    "model_version": null,
+    "n_examples": 300,
+    "package_versions": {},
+    "python": "3.11.14",
+    "size_mb": null,
+    "testset_path": "data/testset/v0/test.jsonl",
+    "testset_sha256": "84025f8e7fd50c905258864c3a93349f565e17a75b208f98ad29f431656d69f6"
+  },
+  "metrics": null,
+  "predictions_path": null,
+  "reason": "ANTHROPIC_API_KEY not set",
+  "status": "unevaluated"
+}

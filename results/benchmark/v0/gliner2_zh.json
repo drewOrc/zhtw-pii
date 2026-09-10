@@ -1,0 +1,135 @@
+{
+  "baseline": "gliner2_zh",
+  "config": {
+    "label_mapping": {
+      "人名": "PERSON",
+      "公司或機構名稱": "ORG",
+      "地址": "ADDRESS"
+    },
+    "params": {
+      "query_labels": [
+        "人名",
+        "地址",
+        "公司或機構名稱"
+      ],
+      "threshold": 0.5
+    }
+  },
+  "latency_ms": {
+    "mean": 41.0171,
+    "n": 290,
+    "p50": 40.5236,
+    "p95": 46.7538,
+    "warmup": 10
+  },
+  "metadata": {
+    "bytes_sent": null,
+    "data_leaves_machine": false,
+    "date_utc": "2026-09-10T02:41:14Z",
+    "hardware": "macOS-26.6.2-arm64-arm-64bit (arm)",
+    "model_id": "fastino/gliner2-privacy-filter-PII-multi",
+    "model_version": "c153999da5f4c509df4322b0c6a1baf3d2c284d7",
+    "n_examples": 300,
+    "package_versions": {
+      "gliner2": "2.0.0",
+      "torch": "2.14.0"
+    },
+    "python": "3.11.14",
+    "size_mb": 1186.8,
+    "testset_path": "data/testset/v0/test.jsonl",
+    "testset_sha256": "84025f8e7fd50c905258864c3a93349f565e17a75b208f98ad29f431656d69f6"
+  },
+  "metrics": {
+    "by_tier": {
+      "easy": {
+        "exact_micro_f1": 0.6034,
+        "overlap_micro_f1": 0.6207
+      },
+      "hard": {
+        "exact_micro_f1": 0.0274,
+        "overlap_micro_f1": 0.2603
+      },
+      "medium": {
+        "exact_micro_f1": 0.0721,
+        "overlap_micro_f1": 0.3869
+      }
+    },
+    "exact": {
+      "ADDRESS": {
+        "f1": 0.1875,
+        "fn": 104,
+        "fp": 0,
+        "p": 1.0,
+        "r": 0.1034,
+        "tp": 12
+      },
+      "ORG": {
+        "f1": 0.1168,
+        "fn": 91,
+        "fp": 30,
+        "p": 0.2105,
+        "r": 0.0808,
+        "tp": 8
+      },
+      "PERSON": {
+        "f1": 0.1854,
+        "fn": 210,
+        "fp": 36,
+        "p": 0.4375,
+        "r": 0.1176,
+        "tp": 28
+      },
+      "micro": {
+        "f1": 0.1693,
+        "fn": 405,
+        "fp": 66,
+        "p": 0.4211,
+        "r": 0.106,
+        "tp": 48
+      }
+    },
+    "false_entities_per_1000_chars": 8.5938,
+    "negatives": {
+      "examples_with_any_prediction": 0,
+      "fpr": 0.0,
+      "n": 50
+    },
+    "overlap": {
+      "ADDRESS": {
+        "f1": 0.1875,
+        "fn": 104,
+        "fp": 0,
+        "p": 1.0,
+        "r": 0.1034,
+        "tp": 12
+      },
+      "ORG": {
+        "f1": 0.5547,
+        "fn": 61,
+        "fp": 0,
+        "p": 1.0,
+        "r": 0.3838,
+        "tp": 38
+      },
+      "PERSON": {
+        "f1": 0.4238,
+        "fn": 174,
+        "fp": 0,
+        "p": 1.0,
+        "r": 0.2689,
+        "tp": 64
+      },
+      "micro": {
+        "f1": 0.4021,
+        "fn": 339,
+        "fp": 0,
+        "p": 1.0,
+        "r": 0.2517,
+        "tp": 114
+      }
+    }
+  },
+  "predictions_path": "results/benchmark/v0/predictions/gliner2_zh.jsonl",
+  "reason": null,
+  "status": "evaluated"
+}
