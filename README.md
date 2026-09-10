@@ -12,9 +12,9 @@ external LLM API. The whole toolchain, synthetic data generation, training
 or distillation, evaluation, ONNX export, and a static demo, is open source.
 
 **Status: M1 in progress.** The frozen test set (`data/testset/v0/`) is
-benchmarked against regex, Presidio, and GLiNER2-PII below; the Claude
-Haiku baseline and the 30-example manual audit (Issue #4) have not run
-yet. See Roadmap below.
+benchmarked against regex, Presidio, GLiNER2-PII, and Claude Haiku 4.5
+below; the 30-example manual audit (Issue #4) has not run yet. See
+Roadmap below.
 
 ## Benchmark
 
@@ -33,7 +33,7 @@ only the M1 baselines.
 | Microsoft Presidio | 0.2718 | 0.0236 | 0.4125 | 0.2228 | 0.6513 | 0.2400 | 3.590 / 5.698 | 663.22 MB | no |
 | GLiNER2-PII (English labels) | 0.1800 | 0.0339 | 0.1168 | 0.1333 | 0.3676 | 0.0000 | 39.946 / 46.724 | 1186.80 MB | no |
 | GLiNER2-PII (Chinese labels) | 0.1854 | 0.1875 | 0.1168 | 0.1693 | 0.4021 | 0.0000 | 40.524 / 46.754 | 1186.80 MB | no |
-| Claude Haiku 4.5 (few-shot) | unevaluated | unevaluated | unevaluated | unevaluated | unevaluated | unevaluated | N/A | N/A |
+| Claude Haiku 4.5 (few-shot) | 0.5336 | 0.0088 | 0.5204 | 0.3982 | 0.9766 | 0.0000 | 1483.287 / 1755.522 | N/A | yes |
 
 Full method, unevaluated-baseline reasons, and per-tier results in [docs/benchmark.md](docs/benchmark.md).
 <!-- benchmark:end -->

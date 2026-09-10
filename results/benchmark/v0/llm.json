@@ -13,23 +13,121 @@
       "structured_output": "json_schema"
     }
   },
-  "latency_ms": null,
+  "latency_ms": {
+    "mean": 1462.7947,
+    "n": 290,
+    "p50": 1483.287,
+    "p95": 1755.5215,
+    "warmup": 10
+  },
   "metadata": {
-    "bytes_sent": null,
-    "data_leaves_machine": null,
-    "date_utc": "2026-09-10T02:42:10Z",
+    "bytes_sent": 296648,
+    "data_leaves_machine": true,
+    "date_utc": "2026-09-10T03:52:02Z",
     "hardware": "macOS-26.6.2-arm64-arm-64bit (arm)",
-    "model_id": null,
-    "model_version": null,
+    "model_id": "claude-haiku-4-5",
+    "model_version": "claude-haiku-4-5",
     "n_examples": 300,
-    "package_versions": {},
+    "package_versions": {
+      "anthropic": "1.4.0"
+    },
+    "parse_failures": 0,
     "python": "3.11.14",
     "size_mb": null,
     "testset_path": "data/testset/v0/test.jsonl",
     "testset_sha256": "84025f8e7fd50c905258864c3a93349f565e17a75b208f98ad29f431656d69f6"
   },
-  "metrics": null,
-  "predictions_path": null,
-  "reason": "ANTHROPIC_API_KEY not set",
-  "status": "unevaluated"
+  "metrics": {
+    "by_tier": {
+      "easy": {
+        "exact_micro_f1": 0.575,
+        "overlap_micro_f1": 1.0
+      },
+      "hard": {
+        "exact_micro_f1": 0.344,
+        "overlap_micro_f1": 0.976
+      },
+      "medium": {
+        "exact_micro_f1": 0.3681,
+        "overlap_micro_f1": 0.9693
+      }
+    },
+    "exact": {
+      "ADDRESS": {
+        "f1": 0.0088,
+        "fn": 115,
+        "fp": 110,
+        "p": 0.009,
+        "r": 0.0086,
+        "tp": 1
+      },
+      "ORG": {
+        "f1": 0.5204,
+        "fn": 48,
+        "fp": 46,
+        "p": 0.5258,
+        "r": 0.5152,
+        "tp": 51
+      },
+      "PERSON": {
+        "f1": 0.5336,
+        "fn": 111,
+        "fp": 111,
+        "p": 0.5336,
+        "r": 0.5336,
+        "tp": 127
+      },
+      "micro": {
+        "f1": 0.3982,
+        "fn": 274,
+        "fp": 267,
+        "p": 0.4013,
+        "r": 0.3951,
+        "tp": 179
+      }
+    },
+    "false_entities_per_1000_chars": 34.7656,
+    "negatives": {
+      "examples_with_any_prediction": 0,
+      "fpr": 0.0,
+      "n": 50
+    },
+    "overlap": {
+      "ADDRESS": {
+        "f1": 0.978,
+        "fn": 5,
+        "fp": 0,
+        "p": 1.0,
+        "r": 0.9569,
+        "tp": 111
+      },
+      "ORG": {
+        "f1": 0.9898,
+        "fn": 2,
+        "fp": 0,
+        "p": 1.0,
+        "r": 0.9798,
+        "tp": 97
+      },
+      "PERSON": {
+        "f1": 0.9706,
+        "fn": 7,
+        "fp": 7,
+        "p": 0.9706,
+        "r": 0.9706,
+        "tp": 231
+      },
+      "micro": {
+        "f1": 0.9766,
+        "fn": 14,
+        "fp": 7,
+        "p": 0.9843,
+        "r": 0.9691,
+        "tp": 439
+      }
+    }
+  },
+  "predictions_path": "results/benchmark/v0/predictions/llm.jsonl",
+  "reason": null,
+  "status": "evaluated"
 }

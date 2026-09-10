@@ -44,11 +44,11 @@ Measured on: macOS-26.6.2-arm64-arm-64bit (arm), Python 3.11.14.
 | Microsoft Presidio | 0.2718 | 0.0236 | 0.4125 | 0.2228 | 0.6513 | 0.2400 | 3.590 / 5.698 | 663.22 MB | no |
 | GLiNER2-PII (English labels) | 0.1800 | 0.0339 | 0.1168 | 0.1333 | 0.3676 | 0.0000 | 39.946 / 46.724 | 1186.80 MB | no |
 | GLiNER2-PII (Chinese labels) | 0.1854 | 0.1875 | 0.1168 | 0.1693 | 0.4021 | 0.0000 | 40.524 / 46.754 | 1186.80 MB | no |
-| Claude Haiku 4.5 (few-shot) | unevaluated | unevaluated | unevaluated | unevaluated | unevaluated | unevaluated | N/A | N/A |
+| Claude Haiku 4.5 (few-shot) | 0.5336 | 0.0088 | 0.5204 | 0.3982 | 0.9766 | 0.0000 | 1483.287 / 1755.522 | N/A | yes |
 
 ## Unevaluated baselines
 
-- **Claude Haiku 4.5 (few-shot)**: ANTHROPIC_API_KEY not set
+All requested baselines evaluated; none were skipped.
 
 ## Results by tier (micro F1, exact / overlap)
 
@@ -58,6 +58,7 @@ Measured on: macOS-26.6.2-arm64-arm-64bit (arm), Python 3.11.14.
 | Microsoft Presidio | 0.4741 / 0.5778 | 0.1851 / 0.6682 | 0.1617 / 0.6979 |
 | GLiNER2-PII (English labels) | 0.5913 / 0.6087 | 0.0068 / 0.3265 | 0.0274 / 0.2603 |
 | GLiNER2-PII (Chinese labels) | 0.6034 / 0.6207 | 0.0721 / 0.3869 | 0.0274 / 0.2603 |
+| Claude Haiku 4.5 (few-shot) | 0.5750 / 1.0000 | 0.3681 / 0.9693 | 0.3440 / 0.9760 |
 
 ## Limitations
 
