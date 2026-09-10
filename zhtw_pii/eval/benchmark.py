@@ -89,6 +89,10 @@ def _unevaluated_result(
             "data_leaves_machine": None,
             "bytes_sent": None,
             "parse_failures": None,
+            "span_location": None,
+            "unlocated_spans": None,
+            "relocated_spans": None,
+            "ignored_items": None,
             "package_versions": {},
             **base_metadata,
         },
@@ -171,6 +175,13 @@ def run_baseline(
     # "does not apply here" convention BaselineMetadata already uses for
     # size_mb/bytes_sent.
     parse_failures = getattr(adapter, "parse_failures", None)
+    # Only the `llm` adapter locates spans from model-returned surface text
+    # rather than trusting model-reported offsets; see claude_llm.py's
+    # locate_spans(). None for every other adapter, same convention as above.
+    span_location = getattr(adapter, "span_location", None)
+    unlocated_spans = getattr(adapter, "unlocated_spans", None)
+    relocated_spans = getattr(adapter, "relocated_spans", None)
+    ignored_items = getattr(adapter, "ignored_items", None)
 
     predictions_path = out_dir / "predictions" / f"{key}.jsonl"
     _write_predictions(predictions_path, gold_examples, predictions)
@@ -192,6 +203,10 @@ def run_baseline(
             "data_leaves_machine": baseline_metadata.data_leaves_machine,
             "bytes_sent": bytes_sent,
             "parse_failures": parse_failures,
+            "span_location": span_location,
+            "unlocated_spans": unlocated_spans,
+            "relocated_spans": relocated_spans,
+            "ignored_items": ignored_items,
             "package_versions": baseline_metadata.package_versions,
             **base_metadata,
         },

@@ -187,6 +187,14 @@ rule.
 the machine that ran the benchmark, after a warmup period whose
 predictions are still used for scoring but excluded from the p50/p95/mean
 calculation.
+
+**LLM baseline span location**: the Claude Haiku baseline is not asked
+for character offsets. Large language models are unreliable at counting
+characters, so it instead returns each entity's literal text, copied
+verbatim from the input, which is then located with a left-to-right,
+cursor-advancing search over the original string rather than trusting a
+model-reported index. See `metadata.span_location`,
+`metadata.unlocated_spans`, and `metadata.relocated_spans` in `llm.json`.
 """
 
 
