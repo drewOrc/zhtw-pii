@@ -88,6 +88,7 @@ def _unevaluated_result(
             "size_mb": None,
             "data_leaves_machine": None,
             "bytes_sent": None,
+            "parse_failures": None,
             "package_versions": {},
             **base_metadata,
         },
@@ -164,6 +165,12 @@ def run_baseline(
         return _unevaluated_result(key, f"{type(exc).__name__}: {exc}", base_metadata, config)
 
     bytes_sent = getattr(adapter, "bytes_sent_total", baseline_metadata.bytes_sent)
+    # Only the `llm` adapter counts this (an unparseable response, absorbed
+    # per-example rather than failing the whole run; see claude_llm.py's
+    # ClaudeLlmBaseline.predict()). None for every other adapter, the same
+    # "does not apply here" convention BaselineMetadata already uses for
+    # size_mb/bytes_sent.
+    parse_failures = getattr(adapter, "parse_failures", None)
 
     predictions_path = out_dir / "predictions" / f"{key}.jsonl"
     _write_predictions(predictions_path, gold_examples, predictions)
@@ -184,6 +191,7 @@ def run_baseline(
             "size_mb": baseline_metadata.size_mb,
             "data_leaves_machine": baseline_metadata.data_leaves_machine,
             "bytes_sent": bytes_sent,
+            "parse_failures": parse_failures,
             "package_versions": baseline_metadata.package_versions,
             **base_metadata,
         },

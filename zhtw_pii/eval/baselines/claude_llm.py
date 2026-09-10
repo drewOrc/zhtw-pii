@@ -156,6 +156,7 @@ class ClaudeLlmBaseline:
     def __init__(self) -> None:
         self._client: anthropic.Anthropic | None = None
         self.bytes_sent_total = 0
+        self.parse_failures = 0
 
     def load(self) -> BaselineMetadata:
         api_key = os.environ.get("ANTHROPIC_API_KEY")
@@ -197,4 +198,23 @@ class ClaudeLlmBaseline:
             output_config={"format": {"type": "json_schema", "schema": RESPONSE_SCHEMA}},
         )
         raw_text = next(block.text for block in response.content if block.type == "text")
-        return parse_response_text(raw_text, len(text))
+        return self._parse_or_count_failure(raw_text, len(text))
+
+    def _parse_or_count_failure(self, raw_text: str, input_length: int) -> list[Span]:
+        """Parse one response body, absorbing a malformed one as an empty prediction.
+
+        A response that fails to parse as JSON despite the json_schema
+        `output_config` (e.g. a truncated body) must not take the other 299
+        examples' already-spent API cost down with it by raising out of
+        `predict()` and failing the whole `run_baseline()` call. Counted in
+        `self.parse_failures`, which `benchmark.py` surfaces into the result
+        JSON's `metadata.parse_failures` the same way it already surfaces
+        `bytes_sent_total`, so a run that hits this path stays visible in
+        the committed result instead of silently scoring as if the model
+        had predicted no entities.
+        """
+        try:
+            return parse_response_text(raw_text, input_length)
+        except json.JSONDecodeError:
+            self.parse_failures += 1
+            return []

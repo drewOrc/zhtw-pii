@@ -97,6 +97,40 @@ def test_parse_response_text_raises_on_unparseable_json():
         parse_response_text("not valid json at all {{{", input_length=10)
 
 
+def test_parse_or_count_failure_absorbs_unparseable_json_as_empty_prediction():
+    """The `predict()` wrapper must not propagate a single bad response.
+
+    `run_baseline()` treats any exception out of `predict()` as fatal for
+    the entire 300-example run (see benchmark.py); one malformed response
+    must not discard the other 299 examples' already-spent API cost.
+    """
+    baseline = ClaudeLlmBaseline()
+    spans = baseline._parse_or_count_failure("not valid json at all {{{", input_length=10)
+    assert spans == []
+
+
+def test_parse_or_count_failure_increments_parse_failures_counter():
+    baseline = ClaudeLlmBaseline()
+    assert baseline.parse_failures == 0
+    baseline._parse_or_count_failure("still not json [[[", input_length=10)
+    assert baseline.parse_failures == 1
+
+
+def test_parse_or_count_failure_accumulates_across_multiple_bad_responses():
+    baseline = ClaudeLlmBaseline()
+    baseline._parse_or_count_failure("bad {{{", input_length=10)
+    baseline._parse_or_count_failure("also bad [[[", input_length=10)
+    assert baseline.parse_failures == 2
+
+
+def test_parse_or_count_failure_does_not_count_a_well_formed_response():
+    baseline = ClaudeLlmBaseline()
+    raw_text = json.dumps({"spans": [{"start": 0, "end": 2, "label": "PERSON"}]})
+    spans = baseline._parse_or_count_failure(raw_text, input_length=10)
+    assert len(spans) == 1
+    assert baseline.parse_failures == 0
+
+
 def test_build_messages_ends_with_the_input_text_as_the_final_user_turn():
     messages = build_messages("測試句子")
     assert messages[-1] == {"role": "user", "content": "測試句子"}
