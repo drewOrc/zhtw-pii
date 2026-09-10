@@ -31,6 +31,14 @@ the machine that ran the benchmark, after a warmup period whose
 predictions are still used for scoring but excluded from the p50/p95/mean
 calculation.
 
+**LLM baseline span location**: the Claude Haiku baseline is not asked
+for character offsets. Large language models are unreliable at counting
+characters, so it instead returns each entity's literal text, copied
+verbatim from the input, which is then located with a left-to-right,
+cursor-advancing search over the original string rather than trusting a
+model-reported index. See `metadata.span_location`,
+`metadata.unlocated_spans`, and `metadata.relocated_spans` in `llm.json`.
+
 
 Test set: `data/testset/v0/test.jsonl`, 300 examples, SHA256 `84025f8e7fd50c905258864c3a93349f565e17a75b208f98ad29f431656d69f6`.
 
@@ -44,7 +52,7 @@ Measured on: macOS-26.6.2-arm64-arm-64bit (arm), Python 3.11.14.
 | Microsoft Presidio | 0.2718 | 0.0236 | 0.4125 | 0.2228 | 0.6513 | 0.2400 | 3.590 / 5.698 | 663.22 MB | no |
 | GLiNER2-PII (English labels) | 0.1800 | 0.0339 | 0.1168 | 0.1333 | 0.3676 | 0.0000 | 39.946 / 46.724 | 1186.80 MB | no |
 | GLiNER2-PII (Chinese labels) | 0.1854 | 0.1875 | 0.1168 | 0.1693 | 0.4021 | 0.0000 | 40.524 / 46.754 | 1186.80 MB | no |
-| Claude Haiku 4.5 (few-shot) | 0.5336 | 0.0088 | 0.5204 | 0.3982 | 0.9766 | 0.0000 | 1483.287 / 1755.522 | N/A | yes |
+| Claude Haiku 4.5 (few-shot) | 0.8529 | 1.0000 | 1.0000 | 0.9227 | 1.0000 | 0.0000 | 1607.920 / 1953.416 | N/A | yes |
 
 ## Unevaluated baselines
 
@@ -58,7 +66,7 @@ All requested baselines evaluated; none were skipped.
 | Microsoft Presidio | 0.4741 / 0.5778 | 0.1851 / 0.6682 | 0.1617 / 0.6979 |
 | GLiNER2-PII (English labels) | 0.5913 / 0.6087 | 0.0068 / 0.3265 | 0.0274 / 0.2603 |
 | GLiNER2-PII (Chinese labels) | 0.6034 / 0.6207 | 0.0721 / 0.3869 | 0.0274 / 0.2603 |
-| Claude Haiku 4.5 (few-shot) | 0.5750 / 1.0000 | 0.3681 / 0.9693 | 0.3440 / 0.9760 |
+| Claude Haiku 4.5 (few-shot) | 1.0000 / 1.0000 | 0.9228 / 1.0000 | 0.8740 / 1.0000 |
 
 ## Limitations
 
