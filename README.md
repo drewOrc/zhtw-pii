@@ -90,6 +90,7 @@ as an ADR in `docs/adr/`:
 - [0004: Static demo with a precomputed large-model column](docs/adr/0004-static-demo-precomputed-llm.md)
 - [0005: Model weights on HF Hub and GitHub Releases, not in git](docs/adr/0005-weights-hf-hub-not-git.md)
 - [0006: Public docs in English, internal planning in Chinese](docs/adr/0006-english-public-docs.md)
+- [0008: Results JSON is the source of truth](docs/adr/0008-results-json-is-source-of-truth.md)
 
 ## Reproduce
 
