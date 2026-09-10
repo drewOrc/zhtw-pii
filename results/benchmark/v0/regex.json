@@ -1,0 +1,130 @@
+{
+  "baseline": "regex",
+  "config": {
+    "label_mapping": {
+      "ADDRESS": "ADDRESS",
+      "ORG": "ORG",
+      "PERSON": "PERSON"
+    },
+    "params": {
+      "county_city_count": 22,
+      "given_name_chars": "1-2 unconstrained CJK ideographs, or 0 with a mandatory honorific",
+      "org_suffix_count": 9,
+      "surname_count": 100
+    }
+  },
+  "latency_ms": {
+    "mean": 0.0041,
+    "n": 290,
+    "p50": 0.004,
+    "p95": 0.0064,
+    "warmup": 10
+  },
+  "metadata": {
+    "bytes_sent": null,
+    "data_leaves_machine": false,
+    "date_utc": "2026-09-10T02:41:14Z",
+    "hardware": "macOS-26.6.2-arm64-arm-64bit (arm)",
+    "model_id": "zhtw-pii-regex-rules",
+    "model_version": "1.0.0",
+    "n_examples": 300,
+    "package_versions": {},
+    "python": "3.11.14",
+    "size_mb": null,
+    "testset_path": "data/testset/v0/test.jsonl",
+    "testset_sha256": "84025f8e7fd50c905258864c3a93349f565e17a75b208f98ad29f431656d69f6"
+  },
+  "metrics": {
+    "by_tier": {
+      "easy": {
+        "exact_micro_f1": 0.9193,
+        "overlap_micro_f1": 0.9938
+      },
+      "hard": {
+        "exact_micro_f1": 0.6868,
+        "overlap_micro_f1": 0.9585
+      },
+      "medium": {
+        "exact_micro_f1": 0.6805,
+        "overlap_micro_f1": 0.9301
+      }
+    },
+    "exact": {
+      "ADDRESS": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 116
+      },
+      "ORG": {
+        "f1": 0.5051,
+        "fn": 49,
+        "fp": 49,
+        "p": 0.5051,
+        "r": 0.5051,
+        "tp": 50
+      },
+      "PERSON": {
+        "f1": 0.6617,
+        "fn": 59,
+        "fp": 124,
+        "p": 0.5908,
+        "r": 0.7521,
+        "tp": 179
+      },
+      "micro": {
+        "f1": 0.7106,
+        "fn": 108,
+        "fp": 173,
+        "p": 0.666,
+        "r": 0.7616,
+        "tp": 345
+      }
+    },
+    "false_entities_per_1000_chars": 22.526,
+    "negatives": {
+      "examples_with_any_prediction": 16,
+      "fpr": 0.32,
+      "n": 50
+    },
+    "overlap": {
+      "ADDRESS": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 116
+      },
+      "ORG": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 99
+      },
+      "PERSON": {
+        "f1": 0.8799,
+        "fn": 0,
+        "fp": 65,
+        "p": 0.7855,
+        "r": 1.0,
+        "tp": 238
+      },
+      "micro": {
+        "f1": 0.9331,
+        "fn": 0,
+        "fp": 65,
+        "p": 0.8745,
+        "r": 1.0,
+        "tp": 453
+      }
+    }
+  },
+  "predictions_path": "results/benchmark/v0/predictions/regex.jsonl",
+  "reason": null,
+  "status": "evaluated"
+}

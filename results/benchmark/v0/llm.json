@@ -1,0 +1,137 @@
+{
+  "baseline": "llm",
+  "config": {
+    "label_mapping": {
+      "ADDRESS": "ADDRESS",
+      "ORG": "ORG",
+      "PERSON": "PERSON"
+    },
+    "params": {
+      "few_shot_examples": 4,
+      "max_tokens": 4096,
+      "model": "claude-haiku-4-5",
+      "structured_output": "json_schema"
+    }
+  },
+  "latency_ms": {
+    "mean": 1626.0491,
+    "n": 290,
+    "p50": 1607.9198,
+    "p95": 1953.4162,
+    "warmup": 10
+  },
+  "metadata": {
+    "bytes_sent": 309848,
+    "data_leaves_machine": true,
+    "date_utc": "2026-09-10T06:25:35Z",
+    "hardware": "macOS-26.6.2-arm64-arm-64bit (arm)",
+    "ignored_items": 0,
+    "model_id": "claude-haiku-4-5",
+    "model_version": "claude-haiku-4-5",
+    "n_examples": 300,
+    "package_versions": {
+      "anthropic": "1.4.0"
+    },
+    "parse_failures": 0,
+    "python": "3.11.14",
+    "relocated_spans": 0,
+    "size_mb": null,
+    "span_location": "surface-text",
+    "testset_path": "data/testset/v0/test.jsonl",
+    "testset_sha256": "84025f8e7fd50c905258864c3a93349f565e17a75b208f98ad29f431656d69f6",
+    "unlocated_spans": 0
+  },
+  "metrics": {
+    "by_tier": {
+      "easy": {
+        "exact_micro_f1": 1.0,
+        "overlap_micro_f1": 1.0
+      },
+      "hard": {
+        "exact_micro_f1": 0.874,
+        "overlap_micro_f1": 1.0
+      },
+      "medium": {
+        "exact_micro_f1": 0.9228,
+        "overlap_micro_f1": 1.0
+      }
+    },
+    "exact": {
+      "ADDRESS": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 116
+      },
+      "ORG": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 99
+      },
+      "PERSON": {
+        "f1": 0.8529,
+        "fn": 35,
+        "fp": 35,
+        "p": 0.8529,
+        "r": 0.8529,
+        "tp": 203
+      },
+      "micro": {
+        "f1": 0.9227,
+        "fn": 35,
+        "fp": 35,
+        "p": 0.9227,
+        "r": 0.9227,
+        "tp": 418
+      }
+    },
+    "false_entities_per_1000_chars": 4.5573,
+    "negatives": {
+      "examples_with_any_prediction": 0,
+      "fpr": 0.0,
+      "n": 50
+    },
+    "overlap": {
+      "ADDRESS": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 116
+      },
+      "ORG": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 99
+      },
+      "PERSON": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 238
+      },
+      "micro": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "p": 1.0,
+        "r": 1.0,
+        "tp": 453
+      }
+    }
+  },
+  "predictions_path": "results/benchmark/v0/predictions/llm.jsonl",
+  "reason": null,
+  "status": "evaluated"
+}
