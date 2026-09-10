@@ -35,3 +35,13 @@ Thumbs.db
 
 # Internal planning docs (see internal/README.md)
 internal/
+
+# Local environments are kept out of the iCloud-synced tree by renaming them
+# to *.nosync (iCloud Drive never syncs that suffix) and leaving a symlink at
+# the original path. Ignore both the mirror directories and the symlinks; the
+# directory-only patterns above (.venv/, node_modules/) do not match symlinks.
+.venv
+.venv.nosync/
+node_modules
+node_modules.nosync/
+*.nosync/
