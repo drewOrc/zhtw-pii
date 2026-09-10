@@ -98,6 +98,39 @@ def test_greedy_matching_claims_at_most_one_prediction_per_gold_span():
     }
 
 
+def test_overlap_wide_prediction_spanning_two_golds_scores_fp_zero():
+    """Documents a known greedy-matching asymmetry; see metrics.py's module docstring.
+
+    One over-wide prediction that overlaps two separate gold spans of the
+    same label is scored as a single match plus a miss (tp=1, fn=1), never
+    as an imprecise prediction with a false-positive penalty (fp=0). This
+    is the mirror image of
+    test_greedy_matching_claims_at_most_one_prediction_per_gold_span (two
+    narrow predictions against one gold: fp=1, not fn). Both are accepted,
+    documented behavior of one-to-one greedy matching, not bugs to fix;
+    the v0 test set never has two same-label gold spans in one example, so
+    this path is currently dormant and this test exists to catch a change
+    in it, not to endorse it as correct.
+    """
+    gold_examples = [
+        _example(
+            "e1",
+            "台北市中正區忠孝路一段1號、新北市板橋區文化路二段2號",
+            (Span(0, 9, "ADDRESS"), Span(10, 19, "ADDRESS")),
+        )
+    ]
+    predictions = {"e1": [Span(0, 19, "ADDRESS")]}
+    result = metrics.score_spans(gold_examples, predictions, metrics.overlap_match)
+    assert result["ADDRESS"] == {
+        "p": 1.0,
+        "r": 0.5,
+        "f1": round(2 / 3, 4),
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+    }
+
+
 def test_compute_negatives_fpr_counts_examples_not_spans():
     """FPR is the fraction of negative examples with at least one prediction, any label."""
     gold_examples = [

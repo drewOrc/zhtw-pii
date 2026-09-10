@@ -14,6 +14,23 @@ most one predicted span and vice versa, processed in the order the spans
 appear in the input lists. Unclaimed gold spans are false negatives;
 unclaimed predicted spans are false positives.
 
+This pairing is intentionally asymmetric when one example has two gold
+spans of the same label. Two overly narrow predictions against one gold
+span score one tp and one fp: the first prediction claims the gold span,
+the second finds no unclaimed gold left and becomes a false positive. One
+overly wide prediction spanning two gold spans of that label instead
+scores one tp and one fn: the prediction claims the first gold span it is
+checked against, and the second gold span finds no unclaimed prediction
+left, so it becomes a false negative rather than the wide prediction also
+counting as a false positive. This is accepted for now, not fixed, because
+one-to-one greedy pairing is a simple O(n) algorithm and the v0 test set
+never repeats a label within one example, so the path is dormant; see
+`test_overlap_wide_prediction_spanning_two_golds_scores_fp_zero` in
+`tests/test_eval_metrics.py`, which locks in the exact current behavior.
+A v1 test set with repeated same-label entities per example will exercise
+this path, and may call for a different matching strategy (e.g. optimal
+bipartite matching) if the asymmetry then proves misleading.
+
 `false_entities_per_1000_chars` counts **exact-match** false positives
 (not overlap) across all 300 examples, including the negative tier, and
 normalizes by total input length. Exact is used here, not overlap,

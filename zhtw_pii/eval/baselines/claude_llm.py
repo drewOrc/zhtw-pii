@@ -11,7 +11,10 @@ Model id: the task brief for this baseline named
 being served do not carry a date suffix (a dated variant is very likely
 to 404 against a real deployment); the live-served id is
 `claude-haiku-4-5`, used here instead. `MODEL_ID` is a module constant so
-pointing this at a different id is a one-line change.
+pointing this at a different id is a one-line change. The first real run
+made with an API key must confirm `MODEL_ID` actually resolves against the
+live API before its output is trusted; nothing in this module or its tests
+calls the real API.
 
 `predict()` uses `output_config: {"format": {"type": "json_schema", ...}}`
 (structured outputs) rather than prompting for JSON and hoping, so a

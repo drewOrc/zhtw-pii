@@ -121,6 +121,13 @@ regex baseline has no dependencies beyond the standard library; Presidio
 and GLiNER2-PII need the `benchmark` dependency group
 (`uv sync --group benchmark`).
 
+Put `ANTHROPIC_API_KEY` in a gitignored `.env` file (`make benchmark` loads
+it automatically if one exists) or export it in your shell; never commit
+it. The first real run made with a key should confirm the model id in
+`zhtw_pii/eval/baselines/claude_llm.py`'s `MODEL_ID` actually resolves
+against the live API, since it has only been exercised so far against a
+mocked response.
+
 ## Roadmap
 
 - **M1, Benchmark**: freeze a 300-example synthetic test set, measure
