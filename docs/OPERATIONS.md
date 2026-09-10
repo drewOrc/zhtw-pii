@@ -52,13 +52,19 @@ If a later fix to the generator (`zhtw_pii/data/generate.py`) would change
 ## Secrets
 
 - `ANTHROPIC_API_KEY` is the only credential this project uses (the LLM
-  few-shot baseline in `zhtw_pii/eval/benchmark.py`). It lives only in the
-  repository's GitHub Actions secret (Settings > Secrets and variables >
-  Actions), scoped to the `eval.yml` workflow introduced at M1. It is
-  never committed to `.env`, never hardcoded, and is not read by any Day 0
-  code.
-- `ci.yml` and `reproduce.yml` need no secrets at all and run the same way
-  on a fork's pull request as they do on `main`.
+  few-shot baseline in `zhtw_pii/eval/benchmark.py`). The repository's
+  GitHub Actions secret (Settings > Secrets and variables > Actions) is
+  already configured with it.
+- For a local run, put it in a gitignored `.env` file in the repo root;
+  `make benchmark` picks it up automatically by passing `--env-file` to
+  `uv run` when `.env` exists (see the Makefile). It is never committed
+  and never hardcoded.
+- No workflow reads this secret yet. `ci.yml` (`lint`, `test`,
+  `secrets-guard`, `report-check`) and `reproduce.yml` need no secrets at
+  all and run the same way on a fork's pull request as they do on `main`.
+  Wiring a workflow that does use it (`eval.yml`, running the full
+  benchmark including the Claude Haiku baseline in CI) is a tracked
+  follow-up from M1: see issue #13.
 - If the key is ever accidentally committed, treat it as compromised
   immediately: rotate it at the provider, then remove it from git history
   (see the "Remove a tracked secret" procedure the team uses for every

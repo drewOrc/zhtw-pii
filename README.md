@@ -123,10 +123,10 @@ and GLiNER2-PII need the `benchmark` dependency group
 
 Put `ANTHROPIC_API_KEY` in a gitignored `.env` file (`make benchmark` loads
 it automatically if one exists) or export it in your shell; never commit
-it. The first real run made with a key should confirm the model id in
-`zhtw_pii/eval/baselines/claude_llm.py`'s `MODEL_ID` actually resolves
-against the live API, since it has only been exercised so far against a
-mocked response.
+it. The model id in `zhtw_pii/eval/baselines/claude_llm.py`'s `MODEL_ID`
+resolved against the live API on the first real run made with a key, no
+date-suffixed fallback needed (see `results/benchmark/v0/llm.json`'s
+`metadata.model_id`).
 
 ## Roadmap
 

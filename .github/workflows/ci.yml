@@ -1,6 +1,6 @@
 name: CI
 
-# Runs on every PR and every push to main. Three independent jobs so the
+# Runs on every PR and every push to main. Four independent jobs so the
 # fastest checks report red first; none of them touch the network or need
 # secrets, so a fork's PR can run this without any repo configuration.
 on:
@@ -76,3 +76,21 @@ jobs:
             exit 1
           fi
           echo "clean: no .env, no model weights, no internal/, no __pycache__ or .venv tracked"
+
+  report-check:
+    name: report-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install uv (reads .python-version for the Python toolchain)
+        uses: astral-sh/setup-uv@v10.0.1
+        with:
+          enable-cache: true
+
+      - name: Install dependencies (locked, no benchmark group needed; report.py only reads results/*.json)
+        run: uv sync --frozen
+
+      - name: report-check (PLAN.md M1 acceptance A4; docs/benchmark.md and README's table must be report.py's own render of results/*.json, never hand-edited, see ADR-0008)
+        run: make report-check
