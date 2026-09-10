@@ -1,0 +1,114 @@
+# Top 100 Taiwan surnames by population, transcribed from public secondary
+# sources reporting Taiwan's Ministry of the Interior "全國姓名統計分析"
+# (2023-06-30 edition): Chinese Wikipedia's "常見姓氏列表" and a Cofacts
+# fact-check article citing the same MOI release. Two independent
+# transcriptions of the source table agreed on this set of 100 characters;
+# exact rank order below rank ~50 is not independently verified against the
+# primary MOI PDF and is not load-bearing here (this list is used as an
+# unordered alternation set, not a ranking).
+#
+# Deliberately sourced independently of zhtw_pii/data/lexicon/surnames.txt
+# (the synthetic generator's 39-surname list): this file backs the regex
+# baseline, which must not be built from the same list it is being
+# evaluated against. See docs/benchmark.md's Limitations section for the
+# resulting overlap between the two lists.
+陳
+林
+黃
+張
+李
+王
+吳
+劉
+蔡
+楊
+許
+鄭
+謝
+洪
+郭
+邱
+曾
+廖
+賴
+徐
+周
+葉
+蘇
+莊
+呂
+江
+何
+蕭
+羅
+高
+潘
+簡
+朱
+鍾
+彭
+游
+詹
+胡
+施
+沈
+余
+盧
+梁
+趙
+顏
+柯
+翁
+魏
+孫
+戴
+范
+方
+宋
+鄧
+杜
+傅
+侯
+曹
+薛
+丁
+卓
+馬
+阮
+董
+唐
+温
+藍
+蔣
+石
+古
+紀
+姚
+連
+馮
+歐
+程
+湯
+田
+康
+黄
+姜
+白
+汪
+尤
+鄒
+黎
+巫
+鐘
+涂
+龔
+嚴
+韓
+袁
+金
+童
+陸
+柳
+凃
+夏
+邵
