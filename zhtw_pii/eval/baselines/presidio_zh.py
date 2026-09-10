@@ -77,12 +77,14 @@ class PresidioBaseline:
 
     def load(self) -> BaselineMetadata:
         try:
-            import spacy
+            import spacy  # pyright: ignore[reportMissingImports]
         except ImportError as exc:
             raise BaselineUnavailable(f"spacy not installed: {exc}") from exc
         try:
-            from presidio_analyzer import AnalyzerEngine
-            from presidio_analyzer.nlp_engine import NlpEngineProvider
+            from presidio_analyzer import AnalyzerEngine  # pyright: ignore[reportMissingImports]
+            from presidio_analyzer.nlp_engine import (  # pyright: ignore[reportMissingImports]
+                NlpEngineProvider,
+            )
         except ImportError as exc:
             raise BaselineUnavailable(f"presidio-analyzer not installed: {exc}") from exc
 

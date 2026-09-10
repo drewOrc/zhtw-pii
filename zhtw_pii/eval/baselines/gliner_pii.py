@@ -68,7 +68,7 @@ def _package_version(dist_name: str) -> str:
 
 def _model_size_mb() -> float | None:
     try:
-        from huggingface_hub import snapshot_download
+        from huggingface_hub import snapshot_download  # pyright: ignore[reportMissingImports]
 
         snapshot_path = Path(snapshot_download(MODEL_ID, revision=MODEL_REVISION))
         total_bytes = sum(f.stat().st_size for f in snapshot_path.rglob("*") if f.is_file())
@@ -95,7 +95,7 @@ class GlinerBaseline:
 
     def load(self) -> BaselineMetadata:
         try:
-            from gliner2 import GLiNER2
+            from gliner2 import GLiNER2  # pyright: ignore[reportMissingImports]
         except ImportError as exc:
             raise BaselineUnavailable(
                 f"gliner2 package not installed (pip install 'gliner2[local]'): {exc}"
@@ -114,7 +114,7 @@ class GlinerBaseline:
 
         package_versions = {"gliner2": _package_version("gliner2")}
         try:
-            import torch
+            import torch  # pyright: ignore[reportMissingImports]
 
             package_versions["torch"] = torch.__version__
         except ImportError:

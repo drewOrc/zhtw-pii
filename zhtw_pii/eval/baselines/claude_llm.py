@@ -29,7 +29,9 @@ if TYPE_CHECKING:
     # Only for type checking: keeps this a static-analysis-only import, so
     # `anthropic` is never actually imported unless load() runs (and load()
     # itself already imports it lazily, guarded by BaselineUnavailable).
-    import anthropic
+    # anthropic is an optional dependency (the `benchmark` group), not
+    # installed for CI's lint job; pyright cannot resolve it there either.
+    import anthropic  # pyright: ignore[reportMissingImports]
 
 from zhtw_pii.eval.types import BaselineMetadata, BaselineUnavailable, Span
 
@@ -157,7 +159,7 @@ class ClaudeLlmBaseline:
         if not api_key:
             raise BaselineUnavailable("ANTHROPIC_API_KEY not set")
         try:
-            import anthropic
+            import anthropic  # pyright: ignore[reportMissingImports]
         except ImportError as exc:
             raise BaselineUnavailable(f"anthropic package not installed: {exc}") from exc
         try:
