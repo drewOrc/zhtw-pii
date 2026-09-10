@@ -68,11 +68,24 @@ Measured on: macOS-26.6.2-arm64-arm-64bit (arm), Python 3.11.14.
   the test set is generated from public statistical lexicons and
   hand-written templates (`data/DATA_CARD.md`); none of these numbers
   represent performance on real Taiwanese text.
+- **ADDRESS F1 of 1.0000 is a test-set artifact, not a quality signal.**
+  `data/generate.py` builds every ADDRESS span from one fixed template (county
+  + district + road + number), and the regex baseline matches it outright
+  (exact-match ADDRESS: tp=116, fp=0, fn=0). This column cannot currently
+  discriminate any tool's real address-extraction quality: a trivial regex
+  already sits at the ceiling, so no baseline can score higher on it, and a
+  lower score elsewhere reflects a mismatch with the template's exact shape
+  rather than weaker extraction. Measuring ADDRESS quality for real needs a v1
+  test set built from non-templated, free-form addresses (missing components,
+  floor numbers, lane/alley forms, colloquial phrasing).
 - **Label mapping is a design choice, not a fact about the tools.** Presidio's
   `LOCATION`/`GPE` and GLiNER2's `address` are mapped onto this project's
   `ADDRESS`; Presidio's `ORGANIZATION`/`ORG` onto `ORG`. A different mapping
   would score differently. See each baseline's `config.label_mapping` in its
-  result JSON.
+  result JSON. Presidio's ADDRESS score makes this concrete: exact F1 0.0236,
+  overlap F1 0.8110 for the same predictions; the gap is entirely about where
+  span boundaries are drawn, not about whether Presidio found the address at
+  all.
 - **GLiNER2-PII's low Chinese recall tracks sentence complexity, and is a
   script/language transfer gap, not a label-familiarity one.** Its 42
   trained PII types (`fastino/gliner2-privacy-filter-PII-multi`'s model
@@ -102,11 +115,13 @@ Measured on: macOS-26.6.2-arm64-arm-64bit (arm), Python 3.11.14.
   evaluated against a differently-sourced test set would not have this
   advantage.
 - **The regex baseline is a naive lower bound by design**, not a tuned
-  system: no dictionary distinguishes a given name from an ordinary word, so
-  it false-positives on words like "金額" (amount, because "金" is a real
-  surname) and on "高雄" (Kaohsiung, because "高" is a real surname; this is
-  internal/PLAN.md's own canonical example of why PERSON needs a model, not
-  a regex). See the design-deviations note in
-  `zhtw_pii/eval/baselines/regex_rules.py`.
+  system: no dictionary distinguishes a given name from an ordinary word.
+  Every negative-tier false positive is the same span, "金額" (amount),
+  misread as PERSON because "金" is a real surname: one recurring word, not
+  a varied set of confusable ones. `internal/PLAN.md`'s own design
+  rationale for why PERSON needs a model, not a regex, separately names a
+  second collision, "高雄" (Kaohsiung, because "高" is a real surname),
+  which does not happen to appear among this benchmark run's predictions.
+  See the design-deviations note in `zhtw_pii/eval/baselines/regex_rules.py`.
 - **This is not a compliance tool.** None of these numbers guarantee
   complete PII detection; see `SECURITY.md`.

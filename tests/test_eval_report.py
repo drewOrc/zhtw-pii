@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import Any, cast
 
 import pytest
 
@@ -242,3 +243,66 @@ def test_unevaluated_reason_with_a_pipe_character_does_not_break_the_bullet_list
     ]
     assert main_table_lines
     assert "expected" not in main_table_lines[0]
+
+
+def _normalize_whitespace(text: str) -> str:
+    """Collapse all whitespace, including word-wrap newlines, to single spaces.
+
+    `report._wrap_bullet` re-wraps a bullet's text once an interpolated
+    value is inserted, so the exact line-break positions shift with the
+    value's length. Assertions on rendered prose compare against this
+    normalized form instead of raw text, so they check content, not
+    incidental wrap points.
+    """
+    return " ".join(text.split())
+
+
+def test_limitations_address_ceiling_bullet_renders_regexs_own_counts(tmp_path, monkeypatch):
+    """The ADDRESS-ceiling bullet must read regex's tp/fp/fn from results, not a fixed number."""
+    regex_result = cast(dict[str, Any], _evaluated_result("regex"))
+    regex_result["metrics"]["exact"]["ADDRESS"] = {
+        "p": 1.0,
+        "r": 1.0,
+        "f1": 1.0,
+        "tp": 116,
+        "fp": 0,
+        "fn": 0,
+    }
+    _setup_fixture(tmp_path, monkeypatch, {"regex": regex_result})
+    benchmark_doc, _ = report.render()
+    normalized = _normalize_whitespace(benchmark_doc)
+    assert "tp=116, fp=0, fn=0" in normalized
+    assert "test-set artifact, not a quality signal" in normalized
+
+
+def test_limitations_address_ceiling_bullet_survives_a_missing_regex_result(tmp_path, monkeypatch):
+    """No regex baseline in results must not crash render(), nor claim counts it lacks."""
+    _setup_fixture(tmp_path, monkeypatch, {"presidio": _evaluated_result("presidio")})
+    benchmark_doc, _ = report.render()
+    normalized = _normalize_whitespace(benchmark_doc)
+    assert "was not evaluated in this results set" in normalized
+    assert "tp=" not in normalized
+
+
+def test_limitations_label_mapping_bullet_appends_presidio_address_f1_pair(tmp_path, monkeypatch):
+    """The label-mapping bullet must cite Presidio's own exact/overlap ADDRESS F1 from results."""
+    presidio_result = cast(dict[str, Any], _evaluated_result("presidio"))
+    presidio_result["metrics"]["exact"]["ADDRESS"]["f1"] = 0.0236
+    presidio_result["metrics"]["overlap"]["ADDRESS"]["f1"] = 0.811
+    _setup_fixture(tmp_path, monkeypatch, {"presidio": presidio_result})
+    benchmark_doc, _ = report.render()
+    normalized = _normalize_whitespace(benchmark_doc)
+    assert "Presidio's ADDRESS score makes this concrete: exact F1 0.0236, overlap F1 0.8110" in (
+        normalized
+    )
+
+
+def test_limitations_label_mapping_bullet_omits_presidio_sentence_when_presidio_is_absent(
+    tmp_path, monkeypatch
+):
+    """No Presidio result must leave the label-mapping bullet exactly as it was before."""
+    _setup_fixture(tmp_path, monkeypatch, {"regex": _evaluated_result("regex")})
+    benchmark_doc, _ = report.render()
+    normalized = _normalize_whitespace(benchmark_doc)
+    assert "Presidio's ADDRESS score makes this concrete" not in normalized
+    assert "See each baseline's `config.label_mapping` in its result JSON." in normalized

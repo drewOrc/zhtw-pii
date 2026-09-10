@@ -18,6 +18,7 @@ import argparse
 import difflib
 import json
 import sys
+import textwrap
 from pathlib import Path
 from typing import Any
 
@@ -216,12 +217,115 @@ def render_benchmark_doc(results: dict[str, dict[str, Any]]) -> str:
         render_unevaluated_section(results),
         "## Results by tier (micro F1, exact / overlap)",
         render_by_tier_table(results),
-        LIMITATIONS_SECTION,
+        render_limitations_section(results),
     ]
     return "\n\n".join(sections).strip() + "\n"
 
 
-LIMITATIONS_SECTION = """## Limitations
+def _regex_address_exact_counts(
+    results: dict[str, dict[str, Any]],
+) -> tuple[int, int, int] | None:
+    """Return (tp, fp, fn) for the regex baseline's exact-match ADDRESS score.
+
+    None when the regex baseline is missing or unevaluated, so the caller
+    can fall back to a sentence that does not cite counts it does not have.
+    """
+    regex_result = results.get("regex")
+    if regex_result is None or regex_result["status"] != "evaluated":
+        return None
+    address = regex_result["metrics"]["exact"]["ADDRESS"]
+    return address["tp"], address["fp"], address["fn"]
+
+
+def _presidio_address_f1_pair(results: dict[str, dict[str, Any]]) -> tuple[float, float] | None:
+    """Return (exact_f1, overlap_f1) for Presidio's ADDRESS score, if evaluated."""
+    presidio_result = results.get("presidio")
+    if presidio_result is None or presidio_result["status"] != "evaluated":
+        return None
+    exact_f1 = presidio_result["metrics"]["exact"]["ADDRESS"]["f1"]
+    overlap_f1 = presidio_result["metrics"]["overlap"]["ADDRESS"]["f1"]
+    return exact_f1, overlap_f1
+
+
+def _wrap_bullet(text: str, width: int = 79) -> str:
+    """Reflow one already-assembled bullet's text to a fixed-width markdown list item.
+
+    Only used for bullets partly built from an interpolated, variable-length
+    value (a baseline's counts, an F1 score): without this, a short number
+    leaves a ragged short line and a long one leaves a line far past the
+    rest of this file's hand-wrapped prose. `text` should not include the
+    leading "- " marker; this adds it.
+    """
+    return textwrap.fill(
+        text,
+        width=width,
+        initial_indent="- ",
+        subsequent_indent="  ",
+        break_long_words=False,
+        break_on_hyphens=False,
+    )
+
+
+def render_limitations_section(results: dict[str, dict[str, Any]]) -> str:
+    """Render the Limitations section.
+
+    Most bullets are fixed prose, but two cite a specific baseline's own
+    numbers (the ADDRESS-ceiling bullet's regex counts, the label-mapping
+    bullet's Presidio F1 pair) and render them from `results` instead of
+    typing them by hand, for the same reason the tables above do
+    (ADR-0008): a re-run that changes those numbers must not leave stale
+    prose sitting next to an updated table, uncaught. Both are assembled as
+    one flat string, then wrapped with `_wrap_bullet`, so an interpolated
+    value of any length still lines up with the hand-wrapped bullets around
+    it instead of leaving one very long or ragged line.
+    """
+    address_counts = _regex_address_exact_counts(results)
+    if address_counts is None:
+        address_ceiling_detail = (
+            "the regex baseline was not evaluated in this results set, so its "
+            "exact-match ADDRESS counts are not shown here"
+        )
+    else:
+        tp, fp, fn = address_counts
+        address_ceiling_detail = (
+            f"the regex baseline matches it outright (exact-match ADDRESS: "
+            f"tp={tp}, fp={fp}, fn={fn})"
+        )
+    address_ceiling_bullet = _wrap_bullet(
+        "**ADDRESS F1 of 1.0000 is a test-set artifact, not a quality signal.** "
+        "`data/generate.py` builds every ADDRESS span from one fixed template "
+        f"(county + district + road + number), and {address_ceiling_detail}. "
+        "This column cannot currently discriminate any tool's real "
+        "address-extraction quality: a trivial regex already sits at the "
+        "ceiling, so no baseline can score higher on it, and a lower score "
+        "elsewhere reflects a mismatch with the template's exact shape "
+        "rather than weaker extraction. Measuring ADDRESS quality for real "
+        "needs a v1 test set built from non-templated, free-form addresses "
+        "(missing components, floor numbers, lane/alley forms, colloquial "
+        "phrasing)."
+    )
+
+    presidio_f1_pair = _presidio_address_f1_pair(results)
+    label_mapping_addendum = ""
+    if presidio_f1_pair is not None:
+        exact_f1, overlap_f1 = presidio_f1_pair
+        label_mapping_addendum = (
+            f" Presidio's ADDRESS score makes this concrete: exact F1 "
+            f"{_fmt_float(exact_f1)}, overlap F1 {_fmt_float(overlap_f1)} for "
+            f"the same predictions; the gap is entirely about where span "
+            f"boundaries are drawn, not about whether Presidio found the "
+            f"address at all."
+        )
+    label_mapping_bullet = _wrap_bullet(
+        "**Label mapping is a design choice, not a fact about the tools.** "
+        "Presidio's `LOCATION`/`GPE` and GLiNER2's `address` are mapped onto "
+        "this project's `ADDRESS`; Presidio's `ORGANIZATION`/`ORG` onto "
+        "`ORG`. A different mapping would score differently. See each "
+        "baseline's `config.label_mapping` in its result "
+        f"JSON.{label_mapping_addendum}"
+    )
+
+    return f"""## Limitations
 
 - **Pre-audit.** The 30-example manual audit of `data/testset/v0/test.jsonl`
   (Issue #4) has not run yet. These numbers are not yet confirmed against a
@@ -230,11 +334,8 @@ LIMITATIONS_SECTION = """## Limitations
   the test set is generated from public statistical lexicons and
   hand-written templates (`data/DATA_CARD.md`); none of these numbers
   represent performance on real Taiwanese text.
-- **Label mapping is a design choice, not a fact about the tools.** Presidio's
-  `LOCATION`/`GPE` and GLiNER2's `address` are mapped onto this project's
-  `ADDRESS`; Presidio's `ORGANIZATION`/`ORG` onto `ORG`. A different mapping
-  would score differently. See each baseline's `config.label_mapping` in its
-  result JSON.
+{address_ceiling_bullet}
+{label_mapping_bullet}
 - **GLiNER2-PII's low Chinese recall tracks sentence complexity, and is a
   script/language transfer gap, not a label-familiarity one.** Its 42
   trained PII types (`fastino/gliner2-privacy-filter-PII-multi`'s model
@@ -264,12 +365,14 @@ LIMITATIONS_SECTION = """## Limitations
   evaluated against a differently-sourced test set would not have this
   advantage.
 - **The regex baseline is a naive lower bound by design**, not a tuned
-  system: no dictionary distinguishes a given name from an ordinary word, so
-  it false-positives on words like "金額" (amount, because "金" is a real
-  surname) and on "高雄" (Kaohsiung, because "高" is a real surname; this is
-  internal/PLAN.md's own canonical example of why PERSON needs a model, not
-  a regex). See the design-deviations note in
-  `zhtw_pii/eval/baselines/regex_rules.py`.
+  system: no dictionary distinguishes a given name from an ordinary word.
+  Every negative-tier false positive is the same span, "金額" (amount),
+  misread as PERSON because "金" is a real surname: one recurring word, not
+  a varied set of confusable ones. `internal/PLAN.md`'s own design
+  rationale for why PERSON needs a model, not a regex, separately names a
+  second collision, "高雄" (Kaohsiung, because "高" is a real surname),
+  which does not happen to appear among this benchmark run's predictions.
+  See the design-deviations note in `zhtw_pii/eval/baselines/regex_rules.py`.
 - **This is not a compliance tool.** None of these numbers guarantee
   complete PII detection; see `SECURITY.md`.
 """
