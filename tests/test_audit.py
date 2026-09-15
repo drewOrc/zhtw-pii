@@ -32,12 +32,12 @@ def _blank(testset_path: Path, seed: int = audit.AUDIT_SEED) -> str:
     return audit.render_blank_audit(examples, audit.sha256_file(testset_path), seed=seed)
 
 
-def _answered_pass(blank: str) -> str:
+def _answered_pass(blank: str, box: str = "- [x]") -> str:
     """Answer every span agree and every row no, then record a signed PASS."""
     return (
-        blank.replace("- [ ] agree", "- [x] agree")
-        .replace("- [ ] no", "- [x] no")
-        .replace("- [ ] PASS:", "- [x] PASS:")
+        blank.replace("- [ ] agree", f"{box} agree")
+        .replace("- [ ] no", f"{box} no")
+        .replace("- [ ] PASS:", f"{box} PASS:")
         .replace("Reviewer:", "Reviewer: Test Reviewer")
         .replace(f"{audit.DATE_FIELD}:", f"{audit.DATE_FIELD}: {REVIEW_DATE}")
         .replace("Summary:", "Summary: No disagreements.")
@@ -54,6 +54,14 @@ def _check(
     if changelog:
         changelog_path.write_text("# Changelog\n", encoding="utf-8")
     return audit.check_audit(audit_path, testset_path, changelog_path)
+
+
+def _line_number_of(text: str, line: str) -> int:
+    return text.split("\n").index(line) + 1
+
+
+def _first_span_location(text: str) -> str:
+    return next(q.location for q in audit.parse_answers(text) if q.options == audit.SPAN_OPTIONS)
 
 
 def _row(text: str, surface: str, label: str) -> Example:
@@ -236,6 +244,137 @@ def test_check_accepts_windows_line_endings_and_trailing_spaces(tmp_path, testse
     assert result.state == "PASS"
 
 
+def test_check_accepts_a_byte_order_mark_before_the_first_line(tmp_path, testset_path):
+    result = _check(tmp_path, testset_path, "\ufeff" + _answered_pass(_blank(testset_path)))
+    assert result.ok, result.problems
+    assert result.state == "PASS"
+
+
+@pytest.mark.parametrize("box", ["- [x ]", "- [ x]", "- [X]", "- [ X ]", "* [x]", "+ [x]"])
+def test_check_reads_a_box_marked_with_stray_spaces_a_capital_x_or_another_bullet(
+    tmp_path, testset_path, box
+):
+    result = _check(tmp_path, testset_path, _answered_pass(_blank(testset_path), box=box))
+    assert result.ok, result.problems
+    assert (result.state, result.complete) == ("PASS", result.total)
+
+
+@pytest.mark.parametrize("mark", ["ｘ", "v", "xx", "✓"])
+def test_check_names_the_line_and_question_of_a_box_it_cannot_read(tmp_path, testset_path, mark):
+    blank = _blank(testset_path)
+    edited = blank.replace("- [ ] agree", f"- [{mark}] agree", 1)
+    result = _check(tmp_path, testset_path, edited)
+    assert not result.ok
+    where = f"line {_line_number_of(edited, f'- [{mark}] agree')}, {_first_span_location(blank)}"
+    assert result.problems == (
+        f"{where}: the box before 'agree' holds {mark!r}; replace the space inside [ ] with a "
+        "plain x to mark it, or leave it empty",
+    )
+
+
+@pytest.mark.parametrize("verdict", ["none yet", "PASS"])
+def test_check_fails_a_note_written_on_the_box_line(tmp_path, testset_path, verdict):
+    blank = _blank(testset_path)
+    before = blank if verdict == "none yet" else _answered_pass(blank)
+    box = "- [ ] agree" if verdict == "none yet" else "- [x] agree"
+    edited = before.replace(box, "- [x] agree 邊界可疑", 1)
+    result = _check(tmp_path, testset_path, edited)
+    assert not result.ok
+    where = f"line {_line_number_of(edited, '- [x] agree 邊界可疑')}, {_first_span_location(blank)}"
+    assert (
+        f"{where}: expected '- [ ] agree', found '- [ ] agree 邊界可疑'; a note goes after Note:"
+    ) in "\n".join(result.problems)
+    assert any("not agree or disagree" in gap for gap in result.incomplete), result.incomplete
+
+
+def test_template_mismatch_names_the_file_line_row_and_question(tmp_path, testset_path):
+    lines = _answered_pass(_blank(testset_path)).split("\n")
+    span_heading = max(i for i, line in enumerate(lines) if line.startswith("### Span "))
+    row_heading = max(i for i in range(span_heading) if lines[i].startswith("## Row "))
+    marked_text = next(i for i in range(span_heading, len(lines)) if lines[i].startswith("`"))
+    lines[marked_text] = lines[marked_text][:-1] + "X`"
+    row = re.fullmatch(r"## Row (\d+) of \d+: (\S+)", lines[row_heading])
+    span = re.match(r"### Span (\d+) of ", lines[span_heading])
+    assert row is not None and span is not None
+    result = _check(tmp_path, testset_path, "\n".join(lines))
+    assert not result.ok
+    where = f"line {marked_text + 1}, row {row.group(1)} ({row.group(2)}), span {span.group(1)}"
+    assert f"{where}: expected " in "\n".join(result.problems), result.problems
+
+
+def test_template_mismatch_reports_a_deleted_option_line_as_missing(tmp_path, testset_path):
+    blank = _blank(testset_path)
+    edited = blank.replace("- [ ] agree\n- [ ] disagree\n", "- [x] agree\n", 1)
+    result = _check(tmp_path, testset_path, edited)
+    assert not result.ok
+    expected = f"{_first_span_location(blank)}: missing '- [ ] disagree'"
+    assert expected in "\n".join(result.problems), result.problems
+
+
+# The sample table as Prettier 3.7.4 leaves it after formatting AUDIT.md for the
+# seed-42 test set: every cell padded to its column width, nothing else changed.
+PRETTIER_ALIGNED_TABLE = """\
+| Cell                              | Rows in test set | Rows in this sample |
+| --------------------------------- | ---------------- | ------------------- |
+| ADDRESS: city and district only   | 22               | 3                   |
+| ADDRESS: street, ASCII digits     | 50               | 5                   |
+| ADDRESS: street, fullwidth digits | 44               | 6                   |
+| ORG                               | 99               | 14                  |
+| PERSON: 2-character name          | 89               | 10                  |
+| PERSON: 3-character name          | 68               | 4                   |
+| PERSON: full name + honorific     | 21               | 2                   |
+| PERSON: surname + honorific       | 60               | 7                   |
+| template: ad_01                   | 19               | 2                   |
+| template: ad_02                   | 12               | 1                   |
+| template: ad_03                   | 16               | 1                   |
+| template: cs_01                   | 17               | 1                   |
+| template: cs_02                   | 21               | 2                   |
+| template: cs_03                   | 20               | 4                   |
+| template: fi_01                   | 22               | 1                   |
+| template: fi_02                   | 20               | 2                   |
+| template: fi_03                   | 12               | 2                   |
+| template: md_01                   | 21               | 2                   |
+| template: md_02                   | 17               | 1                   |
+| template: neg_01                  | 16               | 3                   |
+| template: neg_02                  | 18               | 1                   |
+| template: neg_03                  | 16               | 1                   |
+| template: rc_01                   | 13               | 1                   |
+| template: rc_02                   | 18               | 1                   |
+| template: rc_03                   | 22               | 4                   |
+| text: punctuation removed         | 98               | 10                  |
+| tier: easy                        | 80               | 7                   |
+| tier: hard                        | 70               | 8                   |
+| tier: medium                      | 100              | 10                  |
+| tier: negative                    | 50               | 5                   |
+"""
+_COMPACT_TABLE_HEADER = "| Cell | Rows in test set | Rows in this sample |"
+
+
+@pytest.mark.parametrize("answered", [False, True])
+def test_check_accepts_the_sample_table_after_prettier_pads_its_columns(
+    tmp_path, testset_path, answered
+):
+    text = _answered_pass(_blank(testset_path)) if answered else _blank(testset_path)
+    before_table, header, _ = text.partition(_COMPACT_TABLE_HEADER)
+    assert header
+    formatted = before_table + PRETTIER_ALIGNED_TABLE
+    assert formatted != text
+    result = _check(tmp_path, testset_path, formatted)
+    assert result.ok, result.problems
+
+
+def test_check_still_fails_a_padded_table_whose_count_was_edited(tmp_path, testset_path):
+    before_table, _, _ = _blank(testset_path).partition(_COMPACT_TABLE_HEADER)
+    row = "| ADDRESS: city and district only   | 22               | 3                   |"
+    edited_table = PRETTIER_ALIGNED_TABLE.replace(row, row.replace("| 3 ", "| 4 "))
+    assert edited_table != PRETTIER_ALIGNED_TABLE
+    result = _check(tmp_path, testset_path, before_table + edited_table)
+    assert not result.ok
+    assert "sample method: expected '| ADDRESS: city and district only | 22 | 3 |'" in (
+        "\n".join(result.problems)
+    )
+
+
 def test_check_passes_when_the_changelog_follows_a_completed_pass(tmp_path, testset_path):
     answered = _answered_pass(_blank(testset_path))
     assert _check(tmp_path, testset_path, answered, changelog=True).ok
@@ -276,11 +415,11 @@ _TAMPERED_PASSES: dict[str, tuple[Callable[[str], str], str]] = {
     ),
     "span offset edited": (
         lambda text: re.sub(r"end=(\d+)", lambda m: f"end={int(m.group(1)) + 1}", text, count=1),
-        "differs from the template",
+        "does not match its template",
     ),
     "row text edited": (
         lambda text: text.replace("Text: `", "Text: `X", 1),
-        "differs from the template",
+        "does not match its template",
     ),
 }
 
@@ -302,7 +441,7 @@ def test_check_fails_a_pass_that_was_tampered_with(
 def test_check_fails_a_complete_pass_over_rows_drawn_with_another_seed(tmp_path, testset_path):
     result = _check(tmp_path, testset_path, _answered_pass(_blank(testset_path, seed=7)))
     assert not result.ok
-    assert "differs from the template" in result.problems[0]
+    assert "does not match its template" in result.problems[0]
 
 
 def test_check_fails_even_an_unanswered_audit_once_test_jsonl_has_changed(tmp_path, testset_path):
@@ -310,7 +449,8 @@ def test_check_fails_even_an_unanswered_audit_once_test_jsonl_has_changed(tmp_pa
     generate.write_jsonl(generate.generate_dataset(seed=43), testset_path)
     result = _check(tmp_path, testset_path, blank)
     assert not result.ok
-    assert "SHA-256" in result.problems[0]
+    assert result.problems[0].startswith("the audit was generated for a test set with SHA-256 ")
+    assert "make audit-sample FORCE=1" in result.problems[0]
 
 
 def test_check_fails_when_the_changelog_marks_v0_frozen_but_no_audit_exists(tmp_path, testset_path):

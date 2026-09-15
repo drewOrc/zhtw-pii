@@ -23,9 +23,12 @@ text, so a boundary that is one character off shows as a bracket in the wrong pl
   out of scope (`docs/adr/0002-exclude-format-defined-entities.md`).
 - Judge each row the way you would annotate its text yourself, not by how the
   generator is known to build rows.
-- Mark exactly one box per question by typing `x` between its brackets. A note is
-  required after `disagree` or `yes` and optional otherwise; it may run several
+- Mark exactly one box per question: replace the space inside `[ ]` with `x`, so
+  it reads `[x]`. A note is required after `disagree` or `yes` and optional
+  otherwise; write it after `Note:`, never on the box line. It may run several
   lines. Leave every other line as it is.
+- Run `make audit-check` before each commit. It names the line of anything it
+  cannot read.
 
 Record the verdict at the end once every question is answered. A PASS is what
 freezes the test set (`docs/OPERATIONS.md`). `make audit-check`, which CI runs,

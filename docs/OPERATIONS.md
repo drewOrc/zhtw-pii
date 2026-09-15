@@ -38,11 +38,14 @@ that cite "v0" must always be reproducible against exactly this file.
 The audit is `make audit-sample`, which writes a blank `AUDIT.md` for a
 seeded sample of the committed file, followed by answering it by hand.
 `make audit-check` runs in CI's `test` job and holds the freeze claim to
-that record: it passes while `AUDIT.md` is missing or has no verdict, and
-fails if the verdict is PASS with any question unanswered or any `disagree`
-or `yes` left without a note, if anything beyond the answers differs from
-the template for the committed test set (a regenerated file, a swapped row,
-an edited span), or if `data/CHANGELOG.md` exists without a PASS.
+that record. It passes while `AUDIT.md` is missing, or has no verdict and
+differs from its template only in the answers. It fails if the verdict is
+PASS with any question unanswered or any `disagree` or `yes` left without a
+note; if, verdict or not, a box cannot be read or anything beyond the
+answers differs from the template for the committed test set (a
+regenerated file, a swapped row, an edited span); or if `data/CHANGELOG.md`
+exists without a PASS. Its messages name the file line and the row and
+question involved.
 
 If a later fix to the generator (`zhtw_pii/data/generate.py`) would change
 `v0`'s output:
@@ -57,6 +60,28 @@ If a later fix to the generator (`zhtw_pii/data/generate.py`) would change
    against "v0" to say which version they used.
 5. Keep `v0` in the repository and in git history, so benchmark numbers
    published against it stay reproducible.
+
+### Recording the PASS
+
+The commit that marks the audit PASS is the commit that freezes v0, so
+everything that still describes v0 as pre-audit changes in the same pull
+request, in this order:
+
+1. Answer every question in `data/testset/v0/AUDIT.md`, mark PASS, fill in
+   Reviewer, Date, and Summary, and run `make audit-check` until it
+   reports the PASS.
+2. `docs/benchmark.md` is generated, so do not edit it by hand (that fails
+   `report-check`). Edit the "Pre-audit" limitation inside
+   `render_limitations_section` in `zhtw_pii/eval/report.py`, then run
+   `make report` and `make report-check`.
+3. Edit by hand: in `README.md`, the Status paragraph and the Limitations
+   bullet about the manual audit (both outside the generated benchmark
+   block); in `docs/decisions/M1.md`, the Status row, the "pre-audit" note
+   in the baseline benchmark section, and the #4 row under open items; in
+   `data/DATA_CARD.md`, the Manual audit bullet, which is still in the
+   future tense.
+4. Add `data/CHANGELOG.md`, if at all, in this commit or a later one, never
+   an earlier one: `audit-check` fails a changelog without a PASS.
 
 ## Secrets
 

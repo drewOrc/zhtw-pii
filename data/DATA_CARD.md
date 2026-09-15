@@ -61,6 +61,14 @@ hand-written sentence templates.
   (for example a surname that is also an ordinary adjective), only
   formatting-level noise. This is a known gap against the project's
   hard-tier design goal, tracked internally for v1.
+- **One pair of rows is an exact duplicate.** `hard_020` and `hard_052`
+  have the same text, entities, tier, and template; the generator happened
+  to produce that row twice, and it is the only duplicate among the 300
+  rows. All five M1 baselines predict the same spans on both copies, and
+  dropping one copy moves any baseline's exact PERSON F1 by at most 0.0020
+  and its exact micro F1 by at most 0.0008, without changing the ranking.
+  v0 keeps both rows so that published numbers stay reproducible; v1 will
+  deduplicate.
 - These are exactly why this dataset is a **benchmark for a synthetic
   distribution**, not a claim about real-world accuracy. See the README
   Limitations section.
