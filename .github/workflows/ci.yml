@@ -58,6 +58,14 @@ jobs:
       - name: pytest (unit only; integration/slow need a real model, out of Day 0 scope)
         run: make test
 
+      - name: audit-check (test set v0 is frozen only by a fully answered PASS in its AUDIT.md)
+        # Issue 4 and docs/OPERATIONS.md. Passes while data/testset/v0/AUDIT.md is
+        # missing or has no verdict; fails a PASS with any unanswered question, an
+        # AUDIT.md that no longer matches the committed test set or its seeded
+        # sample, and a data/CHANGELOG.md without a PASS. It is a step in this job,
+        # not a job of its own, because `test` is already a required check on main.
+        run: make audit-check
+
   secrets-guard:
     name: secrets-guard
     runs-on: ubuntu-latest

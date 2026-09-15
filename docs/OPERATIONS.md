@@ -35,6 +35,15 @@ improvised under pressure.
 (`data/testset/v0/AUDIT.md`) passes. "Frozen" means: benchmark numbers
 that cite "v0" must always be reproducible against exactly this file.
 
+The audit is `make audit-sample`, which writes a blank `AUDIT.md` for a
+seeded sample of the committed file, followed by answering it by hand.
+`make audit-check` runs in CI's `test` job and holds the freeze claim to
+that record: it passes while `AUDIT.md` is missing or has no verdict, and
+fails if the verdict is PASS with any question unanswered or any `disagree`
+or `yes` left without a note, if anything beyond the answers differs from
+the template for the committed test set (a regenerated file, a swapped row,
+an edited span), or if `data/CHANGELOG.md` exists without a PASS.
+
 If a later fix to the generator (`zhtw_pii/data/generate.py`) would change
 `v0`'s output:
 

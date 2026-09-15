@@ -1,4 +1,4 @@
-.PHONY: setup lint test testset benchmark report report-check
+.PHONY: setup lint test testset benchmark report report-check audit-sample audit-check
 
 SEED ?= 42
 BASELINES ?= all
@@ -32,3 +32,13 @@ report:
 
 report-check:
 	uv run python -m zhtw_pii.eval.report --check
+
+# Manual label audit of test set v0 (issue #4). The sample seed is pinned in
+# zhtw_pii/data/audit.py and deliberately ignores SEED, so a different sample
+# cannot be drawn without a visible code change. audit-sample refuses to
+# overwrite an existing AUDIT.md, which may hold answers; FORCE=1 overrides.
+audit-sample:
+	uv run python -m zhtw_pii.data.audit sample $(if $(FORCE),--force,)
+
+audit-check:
+	uv run python -m zhtw_pii.data.audit check
