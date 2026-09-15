@@ -250,7 +250,9 @@ def test_check_accepts_a_byte_order_mark_before_the_first_line(tmp_path, testset
     assert result.state == "PASS"
 
 
-@pytest.mark.parametrize("box", ["- [x ]", "- [ x]", "- [X]", "- [ X ]", "* [x]", "+ [x]"])
+@pytest.mark.parametrize(
+    "box", ["- [x ]", "- [ x]", "- [X]", "- [ X ]", "* [x]", "+ [x]", "- [\uff58]", "- [\uff38]"]
+)
 def test_check_reads_a_box_marked_with_stray_spaces_a_capital_x_or_another_bullet(
     tmp_path, testset_path, box
 ):
@@ -259,7 +261,7 @@ def test_check_reads_a_box_marked_with_stray_spaces_a_capital_x_or_another_bulle
     assert (result.state, result.complete) == ("PASS", result.total)
 
 
-@pytest.mark.parametrize("mark", ["ｘ", "v", "xx", "✓"])
+@pytest.mark.parametrize("mark", ["\u00d7", "v", "xx", "\u2713"])
 def test_check_names_the_line_and_question_of_a_box_it_cannot_read(tmp_path, testset_path, mark):
     blank = _blank(testset_path)
     edited = blank.replace("- [ ] agree", f"- [{mark}] agree", 1)

@@ -454,7 +454,9 @@ def _read_box(scan: _Scan, box: re.Match[str], number: int, location: str) -> No
     mark = box.group(1).strip()
     if not mark:
         return
-    if mark not in ("x", "X"):
+    # A CJK input method left in fullwidth mode types \uff58 or \uff38 for x. List them
+    # explicitly: NFKC would also accept look-alikes such as the Roman numeral ten.
+    if mark not in ("x", "X", "\uff58", "\uff38"):
         scan.unreadable_boxes.append(
             f"line {number}, {location}: the box before {label!r} holds {box.group(1)!r}; "
             "replace the space inside [ ] with a plain x to mark it, or leave it empty"
