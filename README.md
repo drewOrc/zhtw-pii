@@ -11,9 +11,10 @@ text, so a pipeline can flag or redact them before sending data to an
 external LLM API. The whole toolchain, synthetic data generation, training
 or distillation, evaluation, ONNX export, and a static demo, is open source.
 
-**Status: M1 in progress.** The frozen test set (`data/testset/v0/`) is
+**Status: M1 in progress.** The v0 test set (`data/testset/v0/`) is
 benchmarked against regex, Presidio, GLiNER2-PII, and Claude Haiku 4.5
-below; the 30-example manual audit (Issue #4) has not run yet. See
+below. It is not frozen yet: it becomes frozen once the 30-example manual
+audit (Issue #4) passes, and that audit has not been completed. See
 Roadmap below.
 
 ## Benchmark
